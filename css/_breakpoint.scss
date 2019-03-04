@@ -1,0 +1,5 @@
+// @include breakpoint( $break-1 ) {
+
+@mixin breakpoint( $point ) {
+	@media only screen and ( min-width: $point ) { @content; }
+}
