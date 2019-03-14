@@ -1,0 +1,95 @@
+main section.proud-partners {
+	h2 {
+		text-align: center;
+	}
+
+	.container {
+		margin: 0 $unit;
+	}
+
+	div.logo-gallery {
+
+		div {
+			background-color: $grey-lighter;
+			border-radius: $border-radius;
+
+			width: 23%;
+			margin: 0.5%;
+			display: inline-block;
+		}
+	}
+@supports(display:grid){
+	margin-bottom: $unit-quadruple;
+		div.logo-gallery {
+			display: grid;
+			grid-gap: $unit;
+			grid-template-columns: 1fr 1fr 1fr;
+			div {
+				width: 100%;
+				margin: 0;
+				img {
+					margin: $unit;
+				}
+			}
+		}
+
+
+		@include breakpoint( $break-m ) {
+
+			div.logo-gallery {
+				grid-template-columns: 1fr 1fr 1fr 1fr;
+
+				div {
+					&:last-child {
+						display: none;
+					}
+				}
+			}
+		} // media query
+
+
+		@include breakpoint( $break-l ) {
+			margin-top: -$unit-quintuple;
+			padding: 0;
+
+			.container {
+				margin: 0;
+			}
+
+			h2 {
+				background-color: $grey-lighter;
+				color: $white;
+				display: block;
+				line-height: $unit-double;
+				margin: 0;
+				padding: $unit-plus-half;
+				width: 100%;
+			}
+
+			div.logo-gallery {
+				grid-template-columns: 1fr;
+				grid-gap: 0;
+
+				div {
+					border-radius: 0;
+					background-color: $grey-lighter;
+
+					img {
+						padding: 30%;
+						margin: -30% 0;
+					}
+
+					&:nth-child(odd){
+						background-color: $yellow;
+					}
+
+					&:last-child {
+						display: block; // was none at last breakpoint
+						@include angle-bottom-lr;
+					}
+				}
+			}
+		} // media query
+} //feature query
+
+} // main section.proud-partners

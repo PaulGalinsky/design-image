@@ -1,0 +1,16 @@
+
+main {
+	h1 {
+		color: pink;
+	}
+
+	@include breakpoint( $break-s ) {
+		margin-top: $unit-quadruple;
+	}
+
+	@include breakpoint( $break-l ) {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+}//main

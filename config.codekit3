@@ -9,7 +9,7 @@
 	],
 "creatorBuild": "29156",
 "files": {
-	"/css/_accessibility.scss": {
+	"/css/1_resets.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -17,12 +17,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/css/_accessibility.css",
+		"oAP": "/css/awesome.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/css/_breakpoint.scss": {
+	"/css/2_helpers.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -30,12 +30,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/css/_breakpoint.css",
+		"oAP": "/css/awesome.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/css/_clearfix.scss": {
+	"/css/3_brand.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -43,12 +43,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/css/_clearfix.css",
+		"oAP": "/css/awesome.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/css/_reset.scss": {
+	"/css/4_structure.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -56,58 +56,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/css/_reset.css",
+		"oAP": "/css/awesome.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/css/_retina.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/css/_retina.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/css/_transition.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/css/_transition.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/css/awesome-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/css/awesome-min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/css/awesome.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/css/awesome-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/css/awesome.scss": {
+	"/css/5_imports_style.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -115,6 +69,110 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
+		"oAP": "/css/awesome.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/css/footer_.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/awesome.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/css/header_.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/awesome.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/css/main_.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/awesome.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/css/main_case_studies.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/awesome.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/css/main_contact_us.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/awesome.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/css/main_intro.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/awesome.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/css/main_meet_the_team.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/awesome.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/css/main_proud_partners.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
 		"oAP": "/css/awesome.css",
 		"oF": 0,
 		"oS": 0,
@@ -2184,7 +2242,7 @@
 		},
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
-		"autoOutputPathFilenamePattern": "*.css",
+		"autoOutputPathFilenamePattern": "awesome.css",
 		"autoOutputPathRelativePath": "../css",
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",

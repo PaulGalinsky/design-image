@@ -1,0 +1,73 @@
+main section.contact-us {
+	@include angle-top-lr;
+	background-color: $yellow;
+	margin-top: $unit-double;
+	padding: $unit-double 0;
+
+	.container {
+		margin: $unit;
+	}
+
+	h2, p {
+		text-align: center;
+	}
+
+	a:hover {
+		color: $white;
+	}
+
+	label {
+		display: inline-block;
+		box-sizing: border-box;
+		width: 35%;
+
+		&.your-enquiry {
+			line-height: $unit-octuple;
+			vertical-align: top;
+		}
+	}
+
+	input {
+		width: 65%;
+		padding: $unit-half 0;
+		border-radius: $border-radius;
+	}
+
+	textarea {
+		width: 65%;
+		height: $unit-octuple;
+		padding: $unit-half;
+		border-radius: $border-radius;
+	}
+
+	input.button {
+		width: 200px;
+		margin: $unit auto $unit-double auto;
+	}
+
+
+	@include breakpoint( $break-s ) {
+		label {
+			padding-left: 5%;
+			width: 30%;
+		}
+		input.email, input.name, textarea {
+			width: 65%;
+		}
+	} // media query
+
+
+	@include breakpoint( $break-m ) {
+		padding: $unit 15%;
+
+		label {
+			padding-left: 0;
+			width: 30%;
+		}
+
+		input.email, input.name, textarea {
+			width: 70%;
+		}
+	} // media query
+
+} // main sction.contact-us

@@ -1,0 +1,69 @@
+// define breakpoints:
+$break-0: 	0px; //not used yet
+$break-s: 	600px;
+$break-m: 	900px;
+$break-l: 	1200px;
+$break-xl: 	1600px; //not used yet
+
+// set macro layouts for header, main, aside,  footer etc...
+
+// fallback basic criteria:
+.main{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+// grid:
+main {
+	.intro { 						grid-area: int;		}
+	.meet-the-team { 		grid-area: mtt;		}
+	.case-studies {			grid-area: cs;		}
+	.proud-partners {		grid-area: pp;		}
+	.contact-us {				grid-area: cu;		}
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-column-gap: 1em;
+	grid-row-gap: 1em;
+	grid-template-areas:
+	"int"
+	"mtt"
+	"cs"
+	"pp"
+	"cu";
+}
+
+@include breakpoint( $break-s ) {
+	main {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"int"
+		"mtt"
+		"cs"
+		"pp"
+		"cu";
+	}
+}
+
+@include breakpoint( $break-m ) {
+	main {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas:
+		"int 	int   int"
+		"mtt  mtt 	mtt"
+		"cs		cs		cs"
+		"pp		pp		pp"
+		"cu		cu		cu";
+	}
+}
+
+@include breakpoint( $break-l ) {
+	main {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-areas:
+		"int 	int		int		pp"
+		"mtt	mtt		mtt		pp"
+		"cs		cs		cs		pp"
+		"cu		cu		cu	  cu";
+	}
+}

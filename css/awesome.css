@@ -1,55 +1,3 @@
-.screen-reader-text {
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  position: absolute !important;
-  width: 1px;
-  word-wrap: normal !important; }
-
-.screen-reader-text:focus {
-  background-color: #f1f1f1;
-  border-radius: 3px;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-  clip: auto !important;
-  color: #4a4a4a;
-  display: block;
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-weight: bold;
-  height: auto;
-  left: 5px;
-  line-height: normal;
-  padding: 15px 23px 14px;
-  text-decoration: none;
-  top: 5px;
-  width: auto;
-  z-index: 100000; }
-
-#primary[tabindex="-1"]:focus {
-  outline: 0; }
-
-.skip-link {
-  position: absolute;
-  right: 100%;
-  top: 0; }
-  .skip-link:focus {
-    background: white;
-    color: #222;
-    display: block;
-    font-family: sans-serif;
-    height: auto;
-    left: 1em;
-    outline: none;
-    padding: 1em;
-    right: auto;
-    text-decoration: none;
-    top: 1em;
-    width: auto;
-    z-index: 100000;
-    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); }
-
 * {
   margin: 0;
   padding: 0; }
@@ -202,69 +150,565 @@ table {
 td, th {
   text-align: left; }
 
-p {
-  font-family: helvetica, sans-serif;
-  font-size: 1em; }
+.skip-link {
+  position: absolute;
+  right: 100%;
+  top: 0; }
+  .skip-link:focus {
+    background: white;
+    color: #222;
+    display: block;
+    font-family: sans-serif;
+    height: auto;
+    left: 1em;
+    outline: none;
+    padding: 1em;
+    right: auto;
+    text-decoration: none;
+    top: 1em;
+    width: auto;
+    z-index: 100000;
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); }
+
+html {
+  font-family: futura-pt, sans-serif;
+  font-weight: 500; }
+
+p, li, label {
+  color: #222222;
+  font-family: open-sans, sans-serif;
+  font-weight: 400;
+  margin-bottom: 1.5rem; }
+  p a, li a, label a {
+    color: inherit;
+    text-decoration: underline; }
 
 h1 {
-  color: purple;
-  font-size: 3em;
-  font-family: roboto; }
+  font-size: 2.5rem; }
 
-body {
-  background-color: yellow; }
+h2 {
+  font-size: 2rem; }
 
-div.link-box {
-  background-color: white;
-  width: 0.5em;
-  height: 0.5em;
-  position: absolute;
-  top: 0.25em;
-  right: -0.25em; }
+h3 {
+  font-size: 1.5rem; }
+
+h4 {
+  font-size: 1.25rem; }
+
+p {
+  font-size: 1.125rem; }
+
+li {
+  font-size: 1.125rem; }
+
+label {
+  font-size: 1.125rem; }
+
+h2 {
+  color: #363636;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase; }
+
+h3 {
+  color: #363636;
+  margin-bottom: 1rem;
+  text-transform: uppercase; }
+
+ul.bullet li {
+  margin-bottom: 0.5rem;
+  list-style-image: url(/img/bullet.svg);
+  margin-left: 1em; }
+  ul.bullet li:last-child {
+    margin-bottom: 1rem; }
+
+.button {
+  display: block;
+  background-color: #222222;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  color: #ffffff;
+  padding: 0.75rem 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  text-decoration: none; }
+  .button:hover {
+    color: #fdd300; }
+
+.button-cancel {
+  background-color: #DA371B; }
+  .button-cancel:hover {
+    background-color: #BE240D; }
+
+.button-nav {
+  background-color: #fdd300; }
+  .button-nav:hover {
+    color: #565656; }
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto; }
 
 main {
-  width: 100%;
-  background-color: #ccc; }
-  main:after {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  grid-template-areas: "int" "mtt" "cs" "pp" "cu"; }
+  main .intro {
+    grid-area: int; }
+  main .meet-the-team {
+    grid-area: mtt; }
+  main .case-studies {
+    grid-area: cs; }
+  main .proud-partners {
+    grid-area: pp; }
+  main .contact-us {
+    grid-area: cu; }
+
+@media only screen and (min-width: 600px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-areas: "int" "mtt" "cs" "pp" "cu"; } }
+
+@media only screen and (min-width: 900px) {
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "int 	int   int" "mtt  mtt 	mtt" "cs		cs		cs" "pp		pp		pp" "cu		cu		cu"; } }
+
+@media only screen and (min-width: 1200px) {
+  main {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "int 	int		int		pp" "mtt	mtt		mtt		pp" "cs		cs		cs		pp" "cu		cu		cu	  cu"; } }
+
+header {
+  border-top: 4px solid #fdd300; }
+  header h1 img {
+    width: 60%;
+    height: auto;
+    max-width: 560px;
+    margin: 1em auto; }
+  @media only screen and (min-width: 600px) {
+    header {
+      height: 80px; }
+      header h1 {
+        position: absolute;
+        background: #ffffff;
+        width: 150px;
+        border: 4px solid black;
+        border-top: 0px;
+        top: 0;
+        left: 5%; }
+        header h1 img {
+          margin: 10px auto;
+          width: 100px;
+          padding: 0; } }
+  @media only screen and (min-width: 1200px) {
+    header .container {
+      position: relative;
+      max-width: 1200px;
+      margin: -4px auto 300px; }
+    header h1 {
+      left: 0; } }
+
+main h1 {
+  color: pink; }
+
+@media only screen and (min-width: 600px) {
+  main {
+    margin-top: 4rem; } }
+
+@media only screen and (min-width: 1200px) {
+  main {
+    max-width: 1200px;
+    margin: 0 auto; } }
+
+main section.intro {
+  margin-bottom: 2rem; }
+  main section.intro .container {
+    margin: 0 1rem; }
+  main section.intro li {
+    text-align: center;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto; }
+  @media only screen and (min-width: 600px) {
+    main section.intro {
+      margin-bottom: 3rem; }
+      main section.intro ul li {
+        font-size: 1.5rem;
+        max-width: 85%; } }
+  @media only screen and (min-width: 900px) {
+    main section.intro {
+      margin-bottom: 1rem; }
+      main section.intro ul li {
+        display: inline-block;
+        width: 33%;
+        vertical-align: top;
+        box-sizing: border-box;
+        padding: 0 1rem;
+        border-left: 4px dotted #fdd300; }
+        main section.intro ul li:first-child {
+          border-left: 0px; } }
+  @media only screen and (min-width: 1200px) {
+    main section.intro {
+      margin: 6rem auto 3rem; }
+      main section.intro .container {
+        margin: 0; } }
+
+main section.case-studies {
+  margin-bottom: 4rem; }
+  main section.case-studies h2 {
+    text-align: center; }
+  main section.case-studies div.container {
+    margin: 0 1rem 1rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr; }
+  main section.case-studies h3 {
+    text-align: center;
+    margin-bottom: 0.5rem; }
+  main section.case-studies div.cs-image {
+    width: 280px;
+    height: 200px;
+    margin: -100px auto 1rem;
+    border-radius: 1rem;
+    border: 0.75rem solid #c4c4c4;
+    overflow: hidden;
+    position: relative; }
+    main section.case-studies div.cs-image img {
+      object-fit: fill;
+      object-position: 0 50%; }
+  main section.case-studies .case-study {
+    align-items: center;
+    background-color: #eeeeee;
+    margin-top: 8rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    position: relative; }
+    @supports (display: grid) {
+      main section.case-studies .case-study {
+        width: 100%;
+        padding-top: 0;
+        padding-bottom: 0; } }
+    main section.case-studies .case-study:before {
+      z-index: -2;
+      background: inherit;
+      content: '';
+      display: block;
+      position: absolute;
+      height: 50%;
+      right: 0;
+      left: 0;
+      top: 0;
+      transform: skewY(-2deg);
+      transform-origin: top left; }
+  main section.case-studies .cs-text {
+    width: 100%; }
+    main section.case-studies .cs-text li {
+      text-align: center;
+      margin-bottom: 0.5rem; }
+    main section.case-studies .cs-text a {
+      max-width: 200px;
+      margin: 1rem auto; }
+  @media only screen and (min-width: 600px) {
+    main section.case-studies div.container {
+      grid-template-columns: 1fr 1fr; }
+    main section.case-studies div.cs-image {
+      width: 210px;
+      height: 150px; } }
+  @media only screen and (min-width: 900px) {
+    main section.case-studies div.cs-image {
+      width: 280px;
+      height: 200px; } }
+  @media only screen and (min-width: 1200px) {
+    main section.case-studies div.container {
+      margin: 0; } }
+
+main section.proud-partners h2 {
+  text-align: center; }
+
+main section.proud-partners .container {
+  margin: 0 1rem; }
+
+main section.proud-partners div.logo-gallery div {
+  background-color: #c4c4c4;
+  border-radius: 0.25rem;
+  width: 23%;
+  margin: 0.5%;
+  display: inline-block; }
+
+@supports (display: grid) {
+  main section.proud-partners {
+    margin-bottom: 4rem; }
+    main section.proud-partners div.logo-gallery {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: 1fr 1fr 1fr; }
+      main section.proud-partners div.logo-gallery div {
+        width: 100%;
+        margin: 0; }
+        main section.proud-partners div.logo-gallery div img {
+          margin: 1rem; }
+    @media only screen and (min-width: 900px) {
+      main section.proud-partners div.logo-gallery {
+        grid-template-columns: 1fr 1fr 1fr 1fr; }
+        main section.proud-partners div.logo-gallery div:last-child {
+          display: none; } }
+    @media only screen and (min-width: 1200px) {
+      main section.proud-partners {
+        margin-top: -5rem;
+        padding: 0; }
+        main section.proud-partners .container {
+          margin: 0; }
+        main section.proud-partners h2 {
+          background-color: #c4c4c4;
+          color: #ffffff;
+          display: block;
+          line-height: 2rem;
+          margin: 0;
+          padding: 1.5rem;
+          width: 100%; }
+        main section.proud-partners div.logo-gallery {
+          grid-template-columns: 1fr;
+          grid-gap: 0; }
+          main section.proud-partners div.logo-gallery div {
+            border-radius: 0;
+            background-color: #c4c4c4; }
+            main section.proud-partners div.logo-gallery div img {
+              padding: 30%;
+              margin: -30% 0; }
+            main section.proud-partners div.logo-gallery div:nth-child(odd) {
+              background-color: #fdd300; }
+            main section.proud-partners div.logo-gallery div:last-child {
+              display: block;
+              position: relative; }
+              main section.proud-partners div.logo-gallery div:last-child:after {
+                z-index: -1;
+                background: inherit;
+                content: '';
+                display: block;
+                position: absolute;
+                height: 50%;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                transform: skewY(2deg);
+                transform-origin: bottom left; } } }
+
+main section.meet-the-team {
+  margin-bottom: 4rem; }
+  main section.meet-the-team h2 {
+    text-align: center; }
+  main section.meet-the-team .container {
+    margin: 0 1rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr; }
+  main section.meet-the-team .team-member {
+    max-width: 600px;
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap; }
+    main section.meet-the-team .team-member .image {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 0;
+      border-radius: 50%;
+      border: 0.75rem solid #fdd300;
+      overflow: hidden; }
+      main section.meet-the-team .team-member .image img {
+        object-fit: cover;
+        width: 200px;
+        height: 200px; }
+    main section.meet-the-team .team-member .details {
+      z-index: -1;
+      align-items: center;
+      background-color: #eeeeee;
+      width: 100%;
+      padding: 6rem 1rem 1rem;
+      margin-top: -5rem;
+      position: relative; }
+      main section.meet-the-team .team-member .details:before {
+        z-index: -2;
+        background: inherit;
+        content: '';
+        display: block;
+        position: absolute;
+        height: 50%;
+        right: 0;
+        left: 0;
+        top: 0;
+        transform: skewY(-2deg);
+        transform-origin: top left; }
+      main section.meet-the-team .team-member .details h3 {
+        text-align: center;
+        margin-bottom: 0.5rem; }
+      main section.meet-the-team .team-member .details li {
+        text-align: center;
+        margin-bottom: 0.5rem; }
+  @media only screen and (min-width: 600px) and (max-width: 899px) {
+    main section.meet-the-team .container {
+      grid-template-columns: 1fr 1fr; }
+    main section.meet-the-team .team-member-3 {
+      grid-column-start: 1;
+      grid-column-end: 3; }
+    @supports (display: grid) {
+      main section.meet-the-team .team-member {
+        max-width: none;
+        width: 100%; }
+      main section.meet-the-team .team-member:nth-child(3) .image {
+        display: none; }
+      main section.meet-the-team .team-member:nth-child(3) .details {
+        padding: 2rem 0;
+        margin: -2rem 0; }
+      main section.meet-the-team .team-member:nth-child(3) .details:before {
+        display: none; } } }
+  @media only screen and (min-width: 900px) {
+    main section.meet-the-team .container {
+      grid-template-columns: 1fr 1fr 1fr; } }
+  @media only screen and (min-width: 1200px) {
+    main section.meet-the-team .container {
+      margin: 0; } }
+
+main section.contact-us {
+  position: relative;
+  background-color: #fdd300;
+  margin-top: 2rem;
+  padding: 2rem 0; }
+  main section.contact-us:before {
+    z-index: -2;
+    background: inherit;
+    content: '';
+    display: block;
+    position: absolute;
+    height: 50%;
+    right: 0;
+    left: 0;
+    top: 0;
+    transform: skewY(-2deg);
+    transform-origin: top left; }
+  main section.contact-us .container {
+    margin: 1rem; }
+  main section.contact-us h2, main section.contact-us p {
+    text-align: center; }
+  main section.contact-us a:hover {
+    color: #ffffff; }
+  main section.contact-us label {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 35%; }
+    main section.contact-us label.your-enquiry {
+      line-height: 8rem;
+      vertical-align: top; }
+  main section.contact-us input {
+    width: 65%;
+    padding: 0.5rem 0;
+    border-radius: 0.25rem; }
+  main section.contact-us textarea {
+    width: 65%;
+    height: 8rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem; }
+  main section.contact-us input.button {
+    width: 200px;
+    margin: 1rem auto 2rem auto; }
+  @media only screen and (min-width: 600px) {
+    main section.contact-us label {
+      padding-left: 5%;
+      width: 30%; }
+    main section.contact-us input.email, main section.contact-us input.name, main section.contact-us textarea {
+      width: 65%; } }
+  @media only screen and (min-width: 900px) {
+    main section.contact-us {
+      padding: 1rem 15%; }
+      main section.contact-us label {
+        padding-left: 0;
+        width: 30%; }
+      main section.contact-us input.email, main section.contact-us input.name, main section.contact-us textarea {
+        width: 70%; } }
+
+footer {
+  background-color: #565656;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  max-width: 1200px;
+  margin: 0 auto; }
+  footer:after {
     clear: both;
     content: "";
     display: table; }
-
-div.content {
-  float: left;
-  background-color: blue;
-  height: 1.5em;
-  margin: 2.5%;
-  width: 95%;
-  position: relative; }
-
-@media all and (min-width: 30rem) {
-  main {
-    background-color: red; }
-  div.content {
-    width: 45%; } }
-
-@media all and (min-width: 40rem) {
-  main {
-    background-color: yellow; }
-  div.content {
-    width: 28%; } }
-
-@media all and (min-width: 50rem) {
-  main {
-    background-color: pink; }
-  div.content {
-    width: 45%; } }
-
-@media all and (min-width: 60rem) {
-  main {
-    background-color: green; }
-  div.content {
-    width: 95%; }
-  html {
-    font-size: 2em; } }
-
-.cf:after {
-  clear: both;
-  content: "";
-  display: table; }
+  footer p {
+    color: #ffffff; }
+  footer a {
+    color: #ffffff;
+    text-decoration: none; }
+    footer a:hover {
+      color: #fdd300; }
+      footer a:hover p {
+        color: #fdd300; }
+  footer .links li a {
+    margin-left: 1rem;
+    padding-left: 1rem;
+    position: relative; }
+    footer .links li a:before {
+      content: '';
+      width: 1rem;
+      height: 1.5rem;
+      position: absolute;
+      left: -1rem; }
+    footer .links li a.tel:before {
+      background: url("../img/foot/tel.svg") no-repeat center center; }
+    footer .links li a.email:before {
+      background: url("../img/foot/email.svg") no-repeat center center; }
+    footer .links li a.twitter:before {
+      background: url("../img/foot/twitter.svg") no-repeat center center; }
+    footer .links li a.privacy:before {
+      background: url("../img/foot/privacy.svg") no-repeat center center; }
+    footer .links li a.top:before {
+      background: url("../img/foot/top.svg") no-repeat center center; }
+    footer .links li a.tel:hover:before {
+      background: url("../img/foot/tel-y.svg") no-repeat center center; }
+    footer .links li a.email:hover:before {
+      background: url("../img/foot/email-y.svg") no-repeat center center; }
+    footer .links li a.twitter:hover:before {
+      background: url("../img/foot/twitter-y.svg") no-repeat center center; }
+    footer .links li a.privacy:hover:before {
+      background: url("../img/foot/privacy-y.svg") no-repeat center center; }
+    footer .links li a.top:hover:before {
+      background: url("../img/foot/top-y.svg") no-repeat center center; }
+  @supports (display: flex) and (display: grid) {
+    footer {
+      padding-left: 0; }
+      footer .container {
+        margin: 0 2rem;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 1fr; }
+        footer .container .links {
+          margin-bottom: 2rem; }
+        footer .container .maps {
+          display: flex;
+          margin-bottom: 2rem; }
+          footer .container .maps div:last-child {
+            margin-left: 1rem; }
+      @media only screen and (min-width: 650px) {
+        footer .container {
+          grid-template-columns: 1fr 1fr; }
+          footer .container .maps {
+            justify-content: flex-end; }
+            footer .container .maps p {
+              text-align: right; }
+          footer .container .further-info {
+            grid-column-start: 1;
+            grid-column-end: 3; } }
+      @media only screen and (min-width: 1200px) {
+        footer .container p {
+          text-align: right; }
+        footer .container .maps div:last-child {
+          margin-left: 2rem; } } }

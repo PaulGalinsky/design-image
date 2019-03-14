@@ -1,0 +1,139 @@
+// @include clearfix();
+@mixin clearfix() {
+	&:after {
+		clear: both;
+		content: "";
+		display: table;
+	}
+}
+
+// initial page accessibility link
+.skip-link {
+	position: absolute;
+	right: 100%;
+	top: 0;
+	&:focus {
+	background: white;
+	color: #222;
+	display: block;
+	font-family: sans-serif;
+	height: auto;
+	left: 1em;
+	outline: none;
+	padding: 1em;
+	right: auto;
+	text-decoration: none;
+	top: 1em;
+	width: auto;
+	z-index: 100000;
+	-webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+	box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+	}
+}
+
+
+
+// set breakpoints
+// @include breakpoint( $break-s ) { css here }
+
+	@mixin breakpoint( $point ) {
+		@media only screen and ( min-width: $point ) { @content; }
+	}
+
+
+
+
+
+
+	// add an angular section to the background of a structural element
+	// this mixin could potentially take variables for colour or angle
+	// @include angle-top-lr;
+
+	@mixin angle-top-lr {
+		position: relative;
+		&:before {
+			z-index: -2;
+
+			background: inherit;
+			content: '';
+			display: block;
+
+			position: absolute;
+			height: 50%;
+
+			right: 0;
+			left: 0;
+			top: 0;
+
+			transform: skewY(-2deg);
+			transform-origin: top left;
+		}
+	}
+
+	@mixin angle-top-rl {
+		position: relative;
+		&:before {
+			z-index: -2;
+
+			background: inherit;
+			content: '';
+			display: block;
+
+			position: absolute;
+			height: 50%;
+
+			right: 0;
+			left: 0;
+			top: 0;
+
+			transform: skewY(2deg);
+			transform-origin: top right;
+		}
+	}
+
+	@mixin angle-bottom-lr {
+		position: relative;
+		&:after {
+			z-index: -1;
+
+			background: inherit;
+			content: '';
+			display: block;
+
+			position: absolute;
+			height: 50%;
+
+			right: 0;
+			left: 0;
+			bottom: 0;
+
+			transform: skewY(2deg);
+			transform-origin: bottom left;
+		}
+	}
+
+
+	@mixin angle-bottom-rl {
+		position: relative;
+		&:after {
+			z-index: -1;
+
+			background: inherit;
+			content: '';
+			display: block;
+
+			position: absolute;
+			height: 50%;
+
+			right: 0;
+			left: 0;
+			bottom: 0;
+
+			transform: skewY(-2deg);
+			transform-origin: bottom right;
+		}
+	}
+
+
+
+
