@@ -74,6 +74,16 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/css/awesome.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/awesome-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/css/footer_.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -101,71 +111,6 @@
 		"uL": 1
 		},
 	"/css/main_.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/css/awesome.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/css/main_case_studies.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/css/awesome.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/css/main_contact_us.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/css/awesome.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/css/main_intro.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/css/awesome.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/css/main_meet_the_team.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/css/awesome.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/css/main_proud_partners.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
