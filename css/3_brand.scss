@@ -1,30 +1,20 @@
 // brand colors:
 
-
-$pink: #FF0065;
-$black: #222222;
-$grey: #565656;
-$grey-lighter: #c4c4c4;
-$grey-lightest: #eeeeee;
-$grey-darker: #363636;
-$yellow: #fdd300;
-$yellow-lighter: #ffeb88;
-$yellow-darker: #edca1b;
-$green-lighter: #14c745;
-$red: #DA371B;
-$red-lighter: #EE2E10;
-$red-darker: #BE240D;
-
 $white: #ffffff;
+$black: #222222;
+$grey: #535353;
+$grey-lighter: #9a9a9a;
+$grey-darker: #333333;
+$pink: #FF0066;
 
 
 // brand typography:
 
-$primary-font:                 futura-pt, sans-serif;
-$secondary-font:               open-sans, sans-serif;
-$primary-font-weight-normal:   500;
+$primary-font:                 'PT Sans', sans-serif;
+$primary-font-weight-normal:   400;
+$primary-font-weight-strong:	 700;
+$secondary-font:               'Lemon', cursive;
 $secondary-font-weight-normal: 400;
-$secondary-font-weight-strong: 700;
 $base-font-size-narrow:        90.625%; // 16px
 $base-font-size:               100%; // 16px
 $base-font:                    1em;
@@ -37,6 +27,7 @@ $secondary-font-line-height:   1.25;
 // brand spacing:
 
 $unit:                1rem;
+$unit-zero:						$unit * 0;
 $unit-three-quarters: $unit * 0.75;
 $unit-half:           $unit / 2;
 $unit-quarter:        $unit / 4;
@@ -54,7 +45,6 @@ $unit-octuple:	      $unit * 8;
 
 // brand graphical flourish:
 
-$border-radius: $unit-quarter;
 
 
 
@@ -65,15 +55,23 @@ html {
 	font-weight: $primary-font-weight-normal;
 }
 
-p, li, label, {
+p, li, label, a {
 	color: $black;
-	font-family: $secondary-font;
-	font-weight: $secondary-font-weight-normal;
+	font-family: $primary-font;
+	font-weight: $primary-font-weight-normal;
 	margin-bottom: $unit-plus-half;
 	a {
 		color: inherit;
 		text-decoration: underline;
 	}
+}
+
+h1, h2 {
+	color: $white;
+	background-color: $pink;
+	font-family: $secondary-font;
+	font-weight: $secondary-font-weight-normal;
+	margin-bottom: $unit-zero;
 }
 
 h1 { font-size: 2.5rem   /* 40px / 16px */ }
@@ -84,62 +82,8 @@ p  { font-size: 1.125rem  /* 18px / 16px */ }
 li { font-size: 1.125rem  /* 18px / 16px */ }
 label { font-size: 1.125rem  /* 18px / 16px */ }
 
-h2 {
-	color: $grey-darker;
-	margin-top: $unit-plus-half;
-	margin-bottom: $unit-plus-half;
-	text-transform: uppercase;
-}
-
-h3 {
-	color: $grey-darker;
-	margin-bottom: $unit;
-	text-transform: uppercase;
-
-}
-
-ul.bullet {
-	li {
-		margin-bottom: $unit-half;
-		list-style-image: url(/img/bullet.svg);
-		margin-left: 1em;
-		&:last-child {
-			margin-bottom: $unit;
-		}
-	}
-}
 
 
-.button {
-	display: block;
-	background-color: $black;
-	border-radius: $border-radius;
-	box-sizing: border-box;
-	color: $white;
-	padding: $unit-three-quarters $unit-double;
-	text-align: center;
-	text-transform: uppercase;
-	transition: all 0.5s ease;
-	text-decoration: none;
-
-	&:hover {
-		color: $yellow;
-	}
-}
-
-.button-cancel {
-	background-color: $red;
-	&:hover {
-		background-color: $red-darker;
-	}
-}
-
-.button-nav {
-	background-color: $yellow;
-	&:hover {
-		color: $grey;
-	}
-}
 
 
 
