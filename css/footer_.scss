@@ -1,5 +1,6 @@
 footer {
 	@include clearfix();
+	position: relative;
 	background-color: $grey;
 	padding-top: $unit-double;
 	padding-left: $unit;
@@ -9,4 +10,16 @@ footer {
 		color: $white;
 	}
 
+	div.logo {
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		background-color: $pink;
+		bottom: 0;
+		right: 5%;
+		p {
+			font-family: lemon, cursive;
+			margin: $unit-half;
+		}
+	}
 } //footer

@@ -3,6 +3,44 @@ main {
 	h1 {
 		color: $black;
 	}
-
-
+	ul.tags {
+		li {
+			display: inline-block;
+			color: $white;
+			background-color: $grey-lighter;
+			font-size: 0.75rem; // 18px / 24px
+			margin: $unit-quarter;
+			padding: $unit-half $unit;
+			a {
+				font-weight: $primary-font-weight-strong;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+			&:hover {
+				background-color: $pink;
+			}
+		}
+	}
+	a.post-link {
+		color: $white;
+		font-family: $secondary-font;
+		font-weight: $secondary-font-weight-normal;
+		text-align: center;
+		width: 50px;
+		height: 50px;
+		background-color: $pink;
+		display: block;
+		&:hover {
+			background-color: $grey-lighter;
+		}
+		&:after{
+			content: ">";
+			font-size: 2.4rem;
+		}
+	}
+	hr {
+		background-color: $black;
+		height: 2px;
+		margin: $unit-quadruple 0;
+	}
 } //main

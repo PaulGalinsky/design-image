@@ -155,6 +155,16 @@
 		"oAP": "/header.php",
 		"oF": 0
 		},
+	"/img/Asset 1.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/Asset 1.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/index.php": {
 		"cB": 0,
 		"ft": 8192,
