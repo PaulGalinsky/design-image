@@ -155,11 +155,11 @@
 		"oAP": "/header.php",
 		"oF": 0
 		},
-	"/img/Asset 1.svg": {
+	"/images/logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/img/Asset 1.svg",
+		"oAP": "/images/logo.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -194,6 +194,14 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/single.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/single.php",
+		"oF": 0
 		},
 	"/style-min.css": {
 		"aP": 1,

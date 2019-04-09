@@ -223,6 +223,10 @@ header {
     margin-left: 5%;
     width: 200px;
     height: 200px; }
+    header h1 img {
+      margin-left: 20px;
+      height: 160px;
+      width: 160px; }
 
 main h1 {
   color: #222222; }
@@ -280,6 +284,5 @@ footer {
     background-color: #FF0066;
     bottom: 0;
     right: 5%; }
-    footer div.logo p {
-      font-family: lemon, cursive;
-      margin: 0.5rem; }
+    footer div.logo img {
+      margin: 10px; }

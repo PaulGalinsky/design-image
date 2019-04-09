@@ -7,5 +7,5 @@
 	</head>
 	<body>
 		<header>
-			<h1><img src="" alt="Design Image. eu"></h1>
+			<h1><img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" width="160" height="160" alt="Design Image Logo" /></h1>
 		</header>

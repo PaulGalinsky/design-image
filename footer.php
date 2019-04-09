@@ -8,7 +8,7 @@
 			</ul>
 		</div>
 		<div class="logo">
-			<p>design image. eu</p>
+			<img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" width="80" height="80" alt="Design Image Logo" />
 		</div>
 	</footer>
 	<?php wp_footer(); ?>
