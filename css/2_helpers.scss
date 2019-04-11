@@ -32,17 +32,19 @@
 }
 
 // remove an item visibly from the viewport, but leave it accessible to screen readers.
-.offscreen
- {
- clip-path: inset(100%);
- clip: rect(1px 1px 1px 1px); /* IE 6/7 */
-  clip: rect(1px, 1px, 1px, 1px);
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+  -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
   height: 1px;
+  margin: -1px;
   overflow: hidden;
+  padding: 0;
   position: absolute;
-  white-space: nowrap; /* added line */
   width: 1px;
- }
+  white-space: nowrap;
+}
 
 
 
