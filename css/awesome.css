@@ -171,6 +171,18 @@ td, th {
     -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); }
 
+.offscreen {
+  clip-path: inset(100%);
+  clip: rect(1px 1px 1px 1px);
+  /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  /* added line */
+  width: 1px; }
+
 html {
   font-family: "PT Sans", sans-serif;
   font-weight: 400; }
@@ -220,16 +232,30 @@ header {
   border-top: 0.5rem solid #FF0066;
   margin-bottom: 1rem; }
   header h1 {
-    margin-left: 5%;
-    width: 200px;
-    height: 200px; }
+    margin-left: 25px;
+    min-width: 100px;
+    width: 100px;
+    height: 100px; }
     header h1 img {
-      margin-left: 20px;
-      height: 160px;
-      width: 160px; }
+      margin-left: 10%;
+      padding-top: 10%;
+      width: 80%;
+      height: auto; }
+
+main .intro {
+  margin: 2rem; }
+  main .intro p {
+    text-align: center; }
 
 main h1 {
   color: #222222; }
+
+main .post {
+  position: relative; }
+  main .post:after {
+    clear: both;
+    content: "";
+    display: table; }
 
 main ul.tags li {
   display: inline-block;
@@ -245,7 +271,15 @@ main ul.tags li {
   main ul.tags li:hover {
     background-color: #FF0066; }
 
+main .post:nth-of-type(odd) a.post-link {
+  left: 65%; }
+
+main .post:nth-of-type(even) a.post-link {
+  right: 65%; }
+
 main a.post-link {
+  position: absolute;
+  top: 45%;
   color: #ffffff;
   font-family: "Lemon", cursive;
   font-weight: 400;
@@ -264,6 +298,25 @@ main hr {
   background-color: #222222;
   height: 2px;
   margin: 4rem 0; }
+
+.home main .content h2, .home main .content p, .home main .content ul {
+  display: none; }
+
+.home main .content .post {
+  margin-bottom: 8rem; }
+
+.home main .post:nth-of-type(odd) .thumbnail-img {
+  width: 70%;
+  border-left: 0.5rem #FF0066 solid; }
+
+.home main .post:nth-of-type(even) .thumbnail-img {
+  width: 70%;
+  border-right: 0.5rem #FF0066 solid;
+  float: right; }
+
+@media only screen and (min-width: 600px) {
+  .home main .content h2, .home main .content p, .home main .content ul {
+    display: block; } }
 
 footer {
   position: relative;

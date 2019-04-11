@@ -1,0 +1,34 @@
+.home main {
+	.content {
+		h2, p, ul {
+			display: none;
+		}
+		.post {
+			margin-bottom: $unit-octuple;
+		}
+	} //.content
+
+
+	.post:nth-of-type(odd) .thumbnail-img {
+		width: 70%;
+		border-left: $unit-half $pink solid;
+	}
+
+	.post:nth-of-type(even) .thumbnail-img {
+		width: 70%;
+		border-right: $unit-half $pink solid;
+		float: right;
+	}
+
+	@include breakpoint( $break-s ) {
+		.content {
+			h2, p, ul {
+				display: block;
+			}
+		}
+
+
+
+	} // break-s
+
+} // .home main

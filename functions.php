@@ -9,6 +9,8 @@ add_theme_support( 'post-thumbnails' );
 add_action('wp_enqueue_scripts', 'awesome_script_enqueue');
 
 
+// Remove unwanted we-admin content
+remove_action('welcome_panel', 'wp_welcome_panel');
 
 function remove_menus() {
 	remove_menu_page( 'edit-comments.php' );          //Comments
@@ -19,8 +21,5 @@ function remove_menus() {
 	remove_menu_page( 'options-general.php' );        //Settings
 }
 add_action( 'admin_menu', 'remove_menus' );
-
-
-
 
 ?>

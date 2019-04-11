@@ -31,6 +31,21 @@
 	}
 }
 
+// remove an item visibly from the viewport, but leave it accessible to screen readers.
+.offscreen
+ {
+ clip-path: inset(100%);
+ clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; /* added line */
+  width: 1px;
+ }
+
+
+
 
 
 // set breakpoints
@@ -39,6 +54,9 @@
 	@mixin breakpoint( $point ) {
 		@media only screen and ( min-width: $point ) { @content; }
 	}
+
+
+
 
 
 

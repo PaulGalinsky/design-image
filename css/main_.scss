@@ -1,7 +1,18 @@
 
 main {
+	.intro {
+		margin: $unit-double;
+			p {
+			text-align: center;
+			}
+	}
 	h1 {
 		color: $black;
+	}
+
+	.post {
+		@include clearfix();
+		position: relative;
 	}
 	ul.tags {
 		li {
@@ -21,7 +32,19 @@ main {
 			}
 		}
 	}
+
+	.post:nth-of-type(odd) a.post-link {
+		left: 65%;
+	}
+
+	.post:nth-of-type(even) a.post-link {
+		right: 65%;
+	}
+
+
 	a.post-link {
+		position: absolute;
+		top: 45%;
 		color: $white;
 		font-family: $secondary-font;
 		font-weight: $secondary-font-weight-normal;
@@ -38,6 +61,7 @@ main {
 			font-size: 2.4rem;
 		}
 	}
+
 	hr {
 		background-color: $black;
 		height: 2px;
