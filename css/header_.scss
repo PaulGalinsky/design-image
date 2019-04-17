@@ -1,19 +1,62 @@
 header {
+	// first item displays on top (so gradient overlay in this case)
+	background-image: 		url('../images/header-background-2.png'),
+												url('../images/header-background-1.png');
+	background-position:  bottom left,
+												top left;
+	background-repeat: 		repeat-x,
+												repeat;
+
+
+
 	border-top: $unit-half solid $pink;
-	margin-bottom:  $unit;
-	h1 {
-		margin-left: 25px;
-		min-width: 100px;
-		width: 100px;
-		height: 100px;
-		img {
-			margin-left: 10%;
-			padding-top: 10%;
-			width: 80%;
-			height: auto;
+	padding-bottom: $unit-octuple;
+	margin-bottom:  -$unit-septuple;
+
+
+	.logo {
+		h1 {
+			margin-left: 25px;
+			min-width: 100px;
+			width: 100px;
+			height: 100px;
+			img {
+				margin-left: 10%;
+				padding-top: 10%;
+				width: 80%;
+				height: auto;
+			}
+		} // h1
+	}
+
+	.intro {
+		margin: $unit-double;
+		p {
+			text-align: center;
 		}
 	}
 
+	@include breakpoint( $break-s ) {
+		.intro {
+			background-color: #a3a3a3;
+			background-color: rgba(163,163,163,0.2);
+			padding: $unit-double;
+			margin-right: 0;
+			p {
+				text-align: right;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	@include breakpoint ( $break-m ) {
+		.intro {
+			margin: $unit-triple 8%;
+			padding: $unit-triple 8%;
+		}
+	}
 
 
 

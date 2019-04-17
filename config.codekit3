@@ -176,6 +176,28 @@
 		"oAP": "/header.php",
 		"oF": 0
 		},
+	"/images/header-background-1.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "/images/header-background-1.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/header-background-2.png": {
+		"ft": 32768,
+		"iS": 160,
+		"oA": 0,
+		"oAP": "/images/header-background-2.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"/images/logo.svg": {
 		"ft": 2097152,
 		"miP": 0,

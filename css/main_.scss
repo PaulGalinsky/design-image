@@ -1,15 +1,5 @@
 
 main {
-	.intro {
-		margin: $unit-double;
-			p {
-			text-align: center;
-			}
-	}
-	h1 {
-		color: $black;
-	}
-
 	.post {
 		@include clearfix();
 		position: relative;

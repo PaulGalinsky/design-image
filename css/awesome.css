@@ -171,17 +171,18 @@ td, th {
     -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); }
 
-.offscreen {
-  clip-path: inset(100%);
-  clip: rect(1px 1px 1px 1px);
-  /* IE 6/7 */
-  clip: rect(1px, 1px, 1px, 1px);
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+  -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
   height: 1px;
+  margin: -1px;
   overflow: hidden;
+  padding: 0;
   position: absolute;
-  white-space: nowrap;
-  /* added line */
-  width: 1px; }
+  width: 1px;
+  white-space: nowrap; }
 
 html {
   font-family: "PT Sans", sans-serif;
@@ -224,31 +225,53 @@ li {
 label {
   font-size: 1.125rem; }
 
-.main {
+header, main, footer {
+  display: grid;
   max-width: 1200px;
   margin: 0 auto; }
 
 header {
+  grid-template-columns: auto; }
+
+@media only screen and (min-width: 600px) {
+  header {
+    grid-template-columns: auto auto; } }
+
+header {
+  background-image: url("../images/header-background-2.png"), url("../images/header-background-1.png");
+  background-position: bottom left, top left;
+  background-repeat: repeat-x, repeat;
   border-top: 0.5rem solid #FF0066;
-  margin-bottom: 1rem; }
-  header h1 {
+  padding-bottom: 8rem;
+  margin-bottom: -7rem; }
+  header .logo h1 {
     margin-left: 25px;
     min-width: 100px;
     width: 100px;
     height: 100px; }
-    header h1 img {
+    header .logo h1 img {
       margin-left: 10%;
       padding-top: 10%;
       width: 80%;
       height: auto; }
-
-main .intro {
-  margin: 2rem; }
-  main .intro p {
-    text-align: center; }
-
-main h1 {
-  color: #222222; }
+  header .intro {
+    margin: 2rem; }
+    header .intro p {
+      text-align: center; }
+  @media only screen and (min-width: 600px) {
+    header .intro {
+      background-color: #a3a3a3;
+      background-color: rgba(163, 163, 163, 0.2);
+      padding: 2rem;
+      margin-right: 0; }
+      header .intro p {
+        text-align: right; }
+        header .intro p:last-child {
+          margin-bottom: 0; } }
+  @media only screen and (min-width: 900px) {
+    header .intro {
+      margin: 3rem 8%;
+      padding: 3rem 8%; } }
 
 main .post {
   position: relative; }
