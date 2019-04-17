@@ -8,40 +8,36 @@ $break-xl: 	1600px; //not used yet
 // set macro layouts for header, main, aside,  footer etc...
 
 // basic grid and fallbacks:
-header, main, footer {
+.container {
 	display: grid;
 	max-width: 1200px;
 	margin: 0 auto;
 }
 
 // grid:
-header {
+header .container {
 	grid-template-columns: auto;
 }
 
-
-main {
+main .container {
 
 }
 
+
 @include breakpoint( $break-s ) {
-	header {
+	header .container {
 		grid-template-columns: auto auto;
 	}
 
-	main {
+	main .container {
 
 	}
 }
 
 @include breakpoint( $break-m ) {
-	main {
 
-	}
 }
 
 @include breakpoint( $break-l ) {
-	main {
 
-	}
 }

@@ -217,31 +217,31 @@ h4 {
   font-size: 1.25rem; }
 
 p {
-  font-size: 1.125rem; }
+  font-size: 1.25rem; }
 
 li {
-  font-size: 1.125rem; }
+  font-size: 1.25rem; }
 
 label {
   font-size: 1.125rem; }
 
-header, main, footer {
+.container {
   display: grid;
   max-width: 1200px;
   margin: 0 auto; }
 
-header {
+header .container {
   grid-template-columns: auto; }
 
 @media only screen and (min-width: 600px) {
-  header {
+  header .container {
     grid-template-columns: auto auto; } }
 
 header {
   background-image: url("../images/header-background-2.png"), url("../images/header-background-1.png");
   background-position: bottom left, top left;
   background-repeat: repeat-x, repeat;
-  border-top: 0.5rem solid #FF0066;
+  border-top: 0.25rem solid #FF0066;
   padding-bottom: 8rem;
   margin-bottom: -7rem; }
   header .logo h1 {
