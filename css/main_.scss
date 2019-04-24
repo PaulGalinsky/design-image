@@ -1,10 +1,12 @@
 
 main {
+
 	.post {
 		@include clearfix();
 		position: relative;
 	}
 	ul.tags {
+		margin: $unit -4px;
 		li {
 			display: inline-block;
 			color: $white;
@@ -33,8 +35,9 @@ main {
 
 
 	a.post-link {
-		position: absolute;
-		top: 45%;
+		// position: absolute;
+		// top: 45%;
+		// display: block;
 		color: $white;
 		font-family: $secondary-font;
 		font-weight: $secondary-font-weight-normal;
@@ -42,7 +45,7 @@ main {
 		width: 50px;
 		height: 50px;
 		background-color: $pink;
-		display: block;
+
 		&:hover {
 			background-color: $grey-lighter;
 		}

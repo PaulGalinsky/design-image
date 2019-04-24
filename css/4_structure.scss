@@ -23,6 +23,9 @@ main .container {
 
 }
 
+footer .container {
+	grid-template-columns: auto auto;
+}
 
 @include breakpoint( $break-s ) {
 	header .container {

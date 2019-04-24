@@ -1,24 +1,28 @@
 footer {
 	@include clearfix();
-	position: relative;
 	background-color: $grey;
 	padding-top: $unit-double;
-	padding-left: $unit;
-	margin: 0 auto;
 
-	p, li {
-		color: $white;
+	div.footer-links {
+		p, li {
+			color: $white;
+		}
 	}
 
 	div.logo {
-		position: absolute;
-		width: 100px;
-		height: 100px;
+		justify-self: end;
+		align-self: end;
+		margin-right: 10%;
 		background-color: $pink;
-		bottom: 0;
-		right: 5%;
+		height: 120px;
+		width: 120px;
+		&:hover{
+			background-color: $grey-lighter;
+		}
 		img {
-			margin: 10px;
+			width: 70%;
+			height: auto;
+			margin: 15%;
 		}
 	}
 } //footer

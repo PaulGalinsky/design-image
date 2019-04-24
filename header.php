@@ -6,7 +6,7 @@
 		<?php wp_head(); ?>
 		<link href="https://fonts.googleapis.com/css?family=Lemon|PT+Sans:400,700" rel="stylesheet">
 	</head>
-	<body <?php body_class(); ?>>
+	<body <?php body_class(); ?> id="site">
 		<header>
 			<div class="container">
 				<div class="logo">
