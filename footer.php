@@ -13,8 +13,8 @@
 
 
 			<div class="logo">
-				<a href="<?php echo esc_url( home_url( '/#site' ) ); ?>" aria-label="Return to the top of our homepage">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Design Image Logo" />
+				<a href="<?php echo site_url(); ?>" rel="home" title="Return to the top of the homepage" aria-label="Return to the top of the homepage">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Design Image Logo" aria-hidden />
 				</a>
 			</div><!-- .logo -->
 
