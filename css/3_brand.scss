@@ -6,6 +6,7 @@ $grey: #535353;
 $grey-lighter: #9a9a9a;
 $grey-darker: #333333;
 $pink: #FF0066;
+$pink-transparent: rgba(255,0,102,0.6);
 
 
 // brand typography:
@@ -84,6 +85,9 @@ li { font-size: 1.25rem  /* 20px / 16px */ }
 label { font-size: 1.125rem  /* 18px / 16px */ }
 
 
+@mixin hover-transition {
+	transition: all 0.5s linear;
+}
 
 
 

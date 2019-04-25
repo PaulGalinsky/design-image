@@ -362,24 +362,67 @@ main hr {
     display: block; } }
 
 footer {
-  background-color: #535353;
-  padding-top: 2rem; }
+  background-image: url("../images/footer-background-1.png");
+  background-position: top left;
+  background-repeat: repeat;
+  border-bottom: 0.5rem solid rgba(255, 0, 102, 0.6);
+  padding-top: 2rem;
+  position: relative; }
   footer:after {
     clear: both;
     content: "";
     display: table; }
   footer div.footer-links p, footer div.footer-links li {
     color: #ffffff; }
+  footer div.footer-links a {
+    text-decoration: none; }
+    footer div.footer-links a:hover {
+      color: #FF0066; }
+      footer div.footer-links a:hover p {
+        color: #FF0066; }
+  footer .footer-links {
+    margin-left: 1rem; }
+    footer .footer-links li a {
+      margin-left: 1rem;
+      padding-left: 1rem;
+      position: relative; }
+      footer .footer-links li a:before {
+        content: '';
+        width: 1rem;
+        height: 1.5rem;
+        position: absolute;
+        left: -1rem; }
+      footer .footer-links li a.lemon:before {
+        background: url("../images/footer-lemon.svg") no-repeat center center; }
+      footer .footer-links li a.email:before {
+        background: url("../images/footer-email.svg") no-repeat center center; }
+      footer .footer-links li a.privacy:before {
+        background: url("../images/footer-padlock.svg") no-repeat center center; }
+      footer .footer-links li a.top:before {
+        background: url("../images/footer-top.svg") no-repeat center center; }
+      footer .footer-links li a.lemon:hover:before {
+        background: url("../images/footer-lemon-p.svg") no-repeat center center; }
+      footer .footer-links li a.email:hover:before {
+        background: url("../images/footer-email-p.svg") no-repeat center center; }
+      footer .footer-links li a.privacy:hover:before {
+        background: url("../images/footer-padlock-p.svg") no-repeat center center; }
+      footer .footer-links li a.top:hover:before {
+        background: url("../images/footer-top-p.svg") no-repeat center center; }
   footer div.logo {
     justify-self: end;
     align-self: end;
     margin-right: 10%;
-    background-color: #FF0066;
+    background-color: rgba(255, 0, 102, 0.6);
     height: 120px;
     width: 120px; }
     footer div.logo:hover {
-      background-color: #9a9a9a; }
+      margin-bottom: -0.5rem;
+      background-color: #FF0066;
+      height: 128px; }
     footer div.logo img {
       width: 70%;
       height: auto;
       margin: 15%; }
+  @media only screen and (min-width: 1272px) {
+    footer .footer-links {
+      margin-left: 0; } }

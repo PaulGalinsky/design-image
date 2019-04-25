@@ -1,11 +1,52 @@
 footer {
 	@include clearfix();
-	background-color: $grey;
+	background-image: 	url('../images/footer-background-1.png');
+	background-position: 	top left;
+	background-repeat: 		repeat;
+	border-bottom: $unit-half solid $pink-transparent;
 	padding-top: $unit-double;
+	position: relative;
+
+
+
 
 	div.footer-links {
 		p, li {
 			color: $white;
+		}
+		a {
+			text-decoration: none;
+			&:hover{
+				color: $pink;
+				p {
+					color: $pink;
+				}
+			}
+		}
+	}
+
+	.footer-links {
+		margin-left: $unit;
+		li a {
+			margin-left: 1rem;
+			padding-left: 1rem;
+			position: relative;
+			&:before {
+				content: '';
+				width: 1rem;
+				height: 1.5rem;
+				position: absolute;
+				left: -1rem;
+			}
+			&.lemon:before {background: url('../images/footer-lemon.svg') no-repeat center center;}
+			&.email:before {background: url('../images/footer-email.svg') no-repeat center center;}
+			&.privacy:before {background: url('../images/footer-padlock.svg') no-repeat center center;}
+			&.top:before {background: url('../images/footer-top.svg') no-repeat center center;}
+
+			&.lemon:hover:before {background: url('../images/footer-lemon-p.svg') no-repeat center center;}
+			&.email:hover:before {background: url('../images/footer-email-p.svg') no-repeat center center;}
+			&.privacy:hover:before {background: url('../images/footer-padlock-p.svg') no-repeat center center;}
+			&.top:hover:before {background: url('../images/footer-top-p.svg') no-repeat center center;}
 		}
 	}
 
@@ -13,16 +54,24 @@ footer {
 		justify-self: end;
 		align-self: end;
 		margin-right: 10%;
-		background-color: $pink;
+		background-color: $pink-transparent;
 		height: 120px;
 		width: 120px;
 		&:hover{
-			background-color: $grey-lighter;
-		}
+			margin-bottom: -$unit-half;
+			background-color: $pink;
+			height: 128px; // can't use $unit as would mix rem and px
+			}
 		img {
 			width: 70%;
 			height: auto;
 			margin: 15%;
+		}
+	}
+
+	@include breakpoint( $break-l + 72 ){
+		.footer-links {
+			margin-left: 0;
 		}
 	}
 } //footer

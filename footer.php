@@ -4,10 +4,10 @@
 
 			<div class="footer-links">
 				<ul>
-					<li>Find out about my new company</li>
-					<li>Email me</li>
-					<li>Privacy Policy</li>
-					<li>Design Image 2019</li>
+					<li><a class="lemon" href="https://www.lumpylemon.co.uk">My new company</a></li>
+					<li><a class="email" href="mailto:paul@designimage.eu">Email me</a></li>
+					<li><a class="privacy" href="<?php echo site_url('/privacy-policy'); ?>">Privacy Policy</a></li>
+					<li><a class="top" href="#site">Back to top</a></li>
 				</ul>
 			</div><!-- .footer-links -->
 
