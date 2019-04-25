@@ -11,9 +11,9 @@ $pink-transparent: rgba(255,0,102,0.6);
 
 // brand typography:
 
-$primary-font:                 'PT Sans', sans-serif;
+$primary-font:                 'Josefin Sans', sans-serif;
 $primary-font-weight-normal:   400;
-$primary-font-weight-strong:	 700;
+$primary-font-weight-strong:   700;
 $secondary-font:               'Lemon', cursive;
 $secondary-font-weight-normal: 400;
 $base-font-size-narrow:        90.625%; // 16px
@@ -70,7 +70,6 @@ p, li, label, a {
 
 h1, h2 {
 	color: $white;
-	background-color: $pink;
 	font-family: $secondary-font;
 	font-weight: $secondary-font-weight-normal;
 	margin-bottom: $unit-zero;
@@ -86,7 +85,7 @@ label { font-size: 1.125rem  /* 18px / 16px */ }
 
 
 @mixin hover-transition {
-	transition: all 0.5s linear;
+	transition: all 0.4s linear;
 }
 
 

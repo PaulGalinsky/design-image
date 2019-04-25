@@ -185,12 +185,12 @@ td, th {
   white-space: nowrap; }
 
 html {
-  font-family: "PT Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: 400; }
 
 p, li, label, a {
   color: #222222;
-  font-family: "PT Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
   line-height: 1.2;
   margin-bottom: 1.5rem; }
@@ -200,7 +200,6 @@ p, li, label, a {
 
 h1, h2 {
   color: #ffffff;
-  background-color: #FF0066;
   font-family: "Lemon", cursive;
   font-weight: 400;
   margin-bottom: 0rem; }
@@ -245,23 +244,34 @@ header {
   background-image: url("../images/header-background-2.png"), url("../images/header-background-1.png");
   background-position: bottom left, top left;
   background-repeat: repeat-x, repeat;
-  border-top: 0.25rem solid #FF0066;
+  border-top: 0.25rem solid rgba(255, 0, 102, 0.6);
   padding-bottom: 8rem;
   margin-bottom: -7rem; }
   header .logo h1 {
     margin-left: 25px;
-    min-width: 100px;
-    width: 100px;
-    height: 100px; }
+    width: 120px;
+    height: 120px;
+    background-color: rgba(255, 0, 102, 0.6);
+    transition: all 0.4s linear;
+    border-top: rgba(255, 0, 102, 0) solid 0.25rem;
+    margin-top: -0.25rem;
+    background-clip: padding-box; }
+    header .logo h1:hover {
+      border-top: #FF0066 solid 0.25rem;
+      background-color: #FF0066; }
     header .logo h1 img {
-      margin-left: 10%;
-      padding-top: 10%;
-      width: 80%;
+      margin-left: 15%;
+      padding-top: 15%;
+      width: 70%;
       height: auto; }
   header .intro {
     margin: 2rem; }
     header .intro p {
       text-align: center; }
+      header .intro p a {
+        transition: all 0.4s linear; }
+      header .intro p a:hover {
+        color: #FF0066; }
   @media only screen and (min-width: 600px) {
     header .intro {
       background-color: #a3a3a3;
@@ -383,10 +393,12 @@ footer {
   footer .footer-links {
     margin-left: 1rem; }
     footer .footer-links li a {
+      transition: all 0.4s linear;
       margin-left: 1rem;
       padding-left: 1rem;
       position: relative; }
       footer .footer-links li a:before {
+        transition: all 0.4s linear;
         content: '';
         width: 1rem;
         height: 1.5rem;
@@ -414,7 +426,8 @@ footer {
     margin-right: 10%;
     background-color: rgba(255, 0, 102, 0.6);
     height: 120px;
-    width: 120px; }
+    width: 120px;
+    transition: all 0.4s linear; }
     footer div.logo:hover {
       margin-bottom: -0.5rem;
       background-color: #FF0066;

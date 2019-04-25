@@ -9,7 +9,7 @@ header {
 
 
 
-	border-top: $unit-quarter solid $pink;
+	border-top: $unit-quarter solid $pink-transparent;
 	padding-bottom: $unit-octuple;
 	margin-bottom:  -$unit-septuple;
 
@@ -17,13 +17,29 @@ header {
 	.logo {
 		h1 {
 			margin-left: 25px;
-			min-width: 100px;
-			width: 100px;
-			height: 100px;
+			width: 120px;
+			height: 120px;
+			background-color: $pink-transparent;
+			@include hover-transition;
+			border-top: rgba(255,0,102,0) solid $unit-quarter;
+			margin-top: -$unit-quarter;
+			background-clip: padding-box;
+			&:hover {
+				border-top: $pink solid $unit-quarter;
+					background-color: $pink;
+				}
+
+
+			// &:hover {
+			// 	background-color: $pink;
+			// 	height: 128px;
+			// 	margin-top: -8px;
+			// 	padding-top: 8px;
+			// }
 			img {
-				margin-left: 10%;
-				padding-top: 10%;
-				width: 80%;
+				margin-left: 15%;
+				padding-top: 15%;
+				width: 70%;
 				height: auto;
 			}
 		} // h1
@@ -33,6 +49,12 @@ header {
 		margin: $unit-double;
 		p {
 			text-align: center;
+			a {
+				@include hover-transition;
+			}
+			a:hover {
+				color: $pink;
+			}
 		}
 	}
 
