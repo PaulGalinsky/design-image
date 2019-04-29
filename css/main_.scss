@@ -1,63 +1,82 @@
-
 main {
+	.content {
+		.post {
+			@include clearfix();
+			margin-bottom: $unit-octuple;
+			position: relative;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
 
-	.post {
-		@include clearfix();
-		position: relative;
-	}
-	ul.tags {
-		margin: $unit -4px;
-		li {
-			display: inline-block;
-			color: $white;
-			background-color: $grey-lighter;
-			font-size: 0.75rem; // 18px / 24px
-			margin: $unit-quarter;
-			padding: $unit-half $unit;
-			a {
-				font-weight: $primary-font-weight-strong;
-				text-decoration: none;
-				text-transform: uppercase;
+			.post-primary-content {
+				display: grid;
+				grid-template-columns: 2fr 1fr;
+				div {
+					align-self: center;
+				}
+				a.post-link {
+					margin: 0 0 0 -25px;
+					align-self: center;
+					color: $white;
+					font-family: $secondary-font;
+					font-weight: $secondary-font-weight-normal;
+					text-align: center;
+					width: 50px;
+					height: 50px;
+					background-color: $pink;
+					@include hover-transition;
+					&:hover {
+						background-color: $grey-lighter;
+					}
+					&:after{
+						content: ">";
+						font-size: 2.4rem;
+					}
+				}
 			}
-			&:hover {
-				background-color: $pink;
+
+			.post-secondary-content {
+				h2 {
+					background-color: $pink;
+				}
+				ul.tags {
+					margin: $unit -4px;
+					li {
+						display: inline-block;
+						color: $white;
+						background-color: $grey-lighter;
+						font-size: 0.75rem; // 18px / 24px
+						margin: $unit-quarter;
+						padding: 10px $unit 8px;
+						@include hover-transition;
+						&:hover {
+							background-color: $pink;
+						}
+						a {
+							font-weight: $primary-font-weight-strong;
+							text-decoration: none;
+							text-transform: uppercase;
+						}
+					}
+				}
+			}
+		} //.post
+
+		.post:nth-of-type(even) {
+			.post-primary-content {
+				a {
+				margin-right: -25px;
+				}
+				.thumbnail-img {
+					border-right: $unit-half $pink solid;
+				}
 			}
 		}
-	}
 
-	.post:nth-of-type(odd) a.post-link {
-		left: 65%;
-	}
-
-	.post:nth-of-type(even) a.post-link {
-		right: 65%;
-	}
-
-
-	a.post-link {
-		// position: absolute;
-		// top: 45%;
-		// display: block;
-		color: $white;
-		font-family: $secondary-font;
-		font-weight: $secondary-font-weight-normal;
-		text-align: center;
-		width: 50px;
-		height: 50px;
-		background-color: $pink;
-
-		&:hover {
-			background-color: $grey-lighter;
+		.post:nth-of-type(odd) {
+			.thumbnail-img {
+				border-left: $unit-half $pink solid;
+			}
 		}
-		&:after{
-			content: ">";
-			font-size: 2.4rem;
-		}
-	}
 
-	hr {
-		background-color: $black;
-		height: 2px;
-		margin: $unit-quadruple 0;
-	}
+	} //.content
 } //main
