@@ -291,16 +291,21 @@ main .content .post {
   margin-bottom: 8rem;
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr; }
+  grid-template-columns: 1fr; }
   main .content .post:after {
     clear: both;
     content: "";
     display: table; }
   main .content .post .post-primary-content {
     display: grid;
-    grid-template-columns: 2fr 1fr; }
-    main .content .post .post-primary-content div {
-      align-self: center; }
+    grid-template-columns: 9fr 1fr; }
+    main .content .post .post-primary-content div.thumbnail-img {
+      min-height: 400px;
+      min-width: 400px;
+      background-color: rgba(255, 0, 102, 0.2);
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      background-position: center; }
     main .content .post .post-primary-content a.post-link {
       margin: 0 0 0 -25px;
       align-self: center;
@@ -317,24 +322,27 @@ main .content .post {
       main .content .post .post-primary-content a.post-link:after {
         content: ">";
         font-size: 2.4rem; }
-  main .content .post .post-secondary-content h2 {
-    background-color: #ff0066; }
-  main .content .post .post-secondary-content ul.tags {
-    margin: 1rem -4px; }
-    main .content .post .post-secondary-content ul.tags li {
-      display: inline-block;
-      color: #ffffff;
-      background-color: #9a9a9a;
-      font-size: 0.75rem;
-      margin: 0.25rem;
-      padding: 10px 1rem 8px;
-      transition: all 0.4s linear; }
-      main .content .post .post-secondary-content ul.tags li:hover {
-        background-color: #ff0066; }
-      main .content .post .post-secondary-content ul.tags li a {
-        font-weight: 700;
-        text-decoration: none;
-        text-transform: uppercase; }
+  main .content .post .post-secondary-content {
+    align-self: center; }
+    main .content .post .post-secondary-content h2 {
+      background-color: rgba(255, 0, 102, 0.6);
+      padding: 1rem; }
+    main .content .post .post-secondary-content ul.tags {
+      margin: 1rem -4px; }
+      main .content .post .post-secondary-content ul.tags li {
+        display: inline-block;
+        color: #ffffff;
+        background-color: #9a9a9a;
+        font-size: 0.75rem;
+        margin: 0.25rem;
+        padding: 10px 1rem 8px;
+        transition: all 0.4s linear; }
+        main .content .post .post-secondary-content ul.tags li:hover {
+          background-color: #ff0066; }
+        main .content .post .post-secondary-content ul.tags li a {
+          font-weight: 700;
+          text-decoration: none;
+          text-transform: uppercase; }
 
 main .content .post:nth-of-type(even) .post-primary-content a {
   margin-right: -25px; }
@@ -344,6 +352,10 @@ main .content .post:nth-of-type(even) .post-primary-content .thumbnail-img {
 
 main .content .post:nth-of-type(odd) .thumbnail-img {
   border-left: 0.5rem #ff0066 solid; }
+
+@media only screen and (min-width: 900px) {
+  main .content .post {
+    grid-template-columns: 1fr 1fr; } }
 
 footer {
   background-image: url("../images/footer-background-1.png");

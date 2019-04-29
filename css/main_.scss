@@ -5,13 +5,21 @@ main {
 			margin-bottom: $unit-octuple;
 			position: relative;
 			display: grid;
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: 1fr;
+
+
 
 			.post-primary-content {
 				display: grid;
-				grid-template-columns: 2fr 1fr;
-				div {
-					align-self: center;
+				grid-template-columns: 9fr 1fr;
+				div.thumbnail-img {
+					min-height: 400px;
+					min-width: 400px;
+					background-color: $pink-super-transparent;
+					background-repeat: no-repeat;
+					background-size: auto 100%;
+					background-position: center
+
 				}
 				a.post-link {
 					margin: 0 0 0 -25px;
@@ -35,8 +43,10 @@ main {
 			}
 
 			.post-secondary-content {
+				align-self: center;
 				h2 {
-					background-color: $pink;
+					background-color: $pink-transparent;
+					padding: $unit;
 				}
 				ul.tags {
 					margin: $unit -4px;
@@ -77,6 +87,14 @@ main {
 				border-left: $unit-half $pink solid;
 			}
 		}
+
+
+		@include breakpoint( $break-m ) {
+			.post {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+
 
 	} //.content
 } //main

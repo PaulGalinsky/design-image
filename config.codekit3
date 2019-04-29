@@ -299,6 +299,17 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/images/pg-bg.jpg": {
+		"ft": 16384,
+		"iS": 76047,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/pg-bg.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/index.php": {
 		"cB": 0,
 		"ft": 8192,

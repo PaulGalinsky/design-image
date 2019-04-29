@@ -22,4 +22,16 @@ function remove_menus() {
 }
 add_action( 'admin_menu', 'remove_menus' );
 
+
+
+// Get just one paragraph for home page https://wordpress.stackexchange.com/questions/127159/grab-the-first-paragraph-of-each-post
+function get_first_paragraph(){
+	global $post;
+	$str = wpautop( get_the_content() );
+	$str = substr( $str, 0, strpos( $str, '</p>' ) + 4 );
+	$str = strip_tags($str, '<a><strong><em>');
+	return '<p>' . $str . '</p>';
+}
+
+
 ?>
