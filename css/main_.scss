@@ -6,20 +6,18 @@ main {
 			position: relative;
 			display: grid;
 			grid-template-columns: 1fr;
-
-
+			margin-left: $unit;
+			margin-right: $unit;
 
 			.post-primary-content {
 				display: grid;
-				grid-template-columns: 9fr 1fr;
+
 				div.thumbnail-img {
 					min-height: 400px;
-					min-width: 400px;
-					background-color: $pink-super-transparent;
 					background-repeat: no-repeat;
 					background-size: auto 100%;
-					background-position: center
-
+					background-position: center;
+					margin: $unit-double $unit $unit;
 				}
 				a.post-link {
 					margin: 0 0 0 -25px;
@@ -44,10 +42,29 @@ main {
 
 			.post-secondary-content {
 				align-self: center;
+				p a{
+					@include hover-transition;
+					&:hover {
+						color: $pink;
+					}
+				}
+				a.read-more {
+					display: inline;
+					color: $pink;
+					@include hover-transition;
+					&:hover {
+						color: $black;
+					}
+				}
 				h2 {
 					background-color: $pink-transparent;
 					padding: $unit;
+					@include hover-transition;
+					&:hover{
+						background-color: $pink;
+					}
 				}
+
 				ul.tags {
 					margin: $unit -4px;
 					li {
@@ -59,7 +76,7 @@ main {
 						padding: 10px $unit 8px;
 						@include hover-transition;
 						&:hover {
-							background-color: $pink;
+							background-color: $grey-darker;
 						}
 						a {
 							font-weight: $primary-font-weight-strong;
@@ -70,24 +87,6 @@ main {
 				}
 			}
 		} //.post
-
-		.post:nth-of-type(even) {
-			.post-primary-content {
-				a {
-				margin-right: -25px;
-				}
-				.thumbnail-img {
-					border-right: $unit-half $pink solid;
-				}
-			}
-		}
-
-		.post:nth-of-type(odd) {
-			.thumbnail-img {
-				border-left: $unit-half $pink solid;
-			}
-		}
-
 
 		@include breakpoint( $break-m ) {
 			.post {

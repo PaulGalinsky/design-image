@@ -291,21 +291,21 @@ main .content .post {
   margin-bottom: 8rem;
   position: relative;
   display: grid;
-  grid-template-columns: 1fr; }
+  grid-template-columns: 1fr;
+  margin-left: 1rem;
+  margin-right: 1rem; }
   main .content .post:after {
     clear: both;
     content: "";
     display: table; }
   main .content .post .post-primary-content {
-    display: grid;
-    grid-template-columns: 9fr 1fr; }
+    display: grid; }
     main .content .post .post-primary-content div.thumbnail-img {
       min-height: 400px;
-      min-width: 400px;
-      background-color: rgba(255, 0, 102, 0.2);
       background-repeat: no-repeat;
       background-size: auto 100%;
-      background-position: center; }
+      background-position: center;
+      margin: 2rem 1rem 1rem; }
     main .content .post .post-primary-content a.post-link {
       margin: 0 0 0 -25px;
       align-self: center;
@@ -324,9 +324,22 @@ main .content .post {
         font-size: 2.4rem; }
   main .content .post .post-secondary-content {
     align-self: center; }
+    main .content .post .post-secondary-content p a {
+      transition: all 0.4s linear; }
+      main .content .post .post-secondary-content p a:hover {
+        color: #ff0066; }
+    main .content .post .post-secondary-content a.read-more {
+      display: inline;
+      color: #ff0066;
+      transition: all 0.4s linear; }
+      main .content .post .post-secondary-content a.read-more:hover {
+        color: #222222; }
     main .content .post .post-secondary-content h2 {
       background-color: rgba(255, 0, 102, 0.6);
-      padding: 1rem; }
+      padding: 1rem;
+      transition: all 0.4s linear; }
+      main .content .post .post-secondary-content h2:hover {
+        background-color: #ff0066; }
     main .content .post .post-secondary-content ul.tags {
       margin: 1rem -4px; }
       main .content .post .post-secondary-content ul.tags li {
@@ -338,20 +351,11 @@ main .content .post {
         padding: 10px 1rem 8px;
         transition: all 0.4s linear; }
         main .content .post .post-secondary-content ul.tags li:hover {
-          background-color: #ff0066; }
+          background-color: #333333; }
         main .content .post .post-secondary-content ul.tags li a {
           font-weight: 700;
           text-decoration: none;
           text-transform: uppercase; }
-
-main .content .post:nth-of-type(even) .post-primary-content a {
-  margin-right: -25px; }
-
-main .content .post:nth-of-type(even) .post-primary-content .thumbnail-img {
-  border-right: 0.5rem #ff0066 solid; }
-
-main .content .post:nth-of-type(odd) .thumbnail-img {
-  border-left: 0.5rem #ff0066 solid; }
 
 @media only screen and (min-width: 900px) {
   main .content .post {
