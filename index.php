@@ -15,7 +15,6 @@
 								<a href="<?php the_permalink(); ?>" class="read-more"><h2><?php the_title(); ?></h2></a>
 								<p><?php echo get_first_paragraph(); ?></p>
 								<a href="<?php the_permalink(); ?>" class="read-more"> >> Read more >> </a>
-								<!-- <p ><?php the_content(); ?></p> -->
 								<?php the_tags( '<ul class="tags"><li>', '</li><li>', '</li></ul>' ); ?>
 							</div>
 						</div>
