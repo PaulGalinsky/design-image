@@ -11,11 +11,7 @@ main {
 
 			.post-primary-content {
 				display: grid;
-
 				grid-template-columns: auto;
-				background-color: blue;
-				color: black;
-
 				div.thumbnail-img {
 					min-height: 400px;
 					background-repeat: no-repeat;
@@ -23,25 +19,32 @@ main {
 					background-position: center;
 					margin: $unit-double $unit $unit;
 				}
-				a.post-link {
-					margin: 0 0 0 -25px;
-					align-self: center;
-					color: $white;
-					font-family: $secondary-font;
-					font-weight: $secondary-font-weight-normal;
-					text-align: center;
-					width: 50px;
-					height: 50px;
-					background-color: $pink;
-					@include hover-transition;
-					&:hover {
-						background-color: $grey-lighter;
+				.post-navigation {
+					display: grid;
+
+					grid-template-columns: 1fr 1fr;
+					grid-column-gap: $unit;
+					margin: 0 0 $unit;
+					div{
+						align-self: start;
+						a {
+							display: inline-block;
+							width: 100%;
+							height: 100%;
+							padding: 1rem;
+							text-align: center;
+							margin: 0;
+							background-color: $pink-transparent;
+							color: $white;
+							font-family: $secondary-font;
+							font-weight: $secondary-font-weight-normal;
+							@include hover-transition;
+							&:hover {
+								background-color: $pink;
+							}
+						}
 					}
-					&:after{
-						content: ">";
-						font-size: 2.4rem;
-					}
-				}
+				} // .post-navigation
 			}
 
 			.post-secondary-content {
@@ -61,6 +64,10 @@ main {
 					}
 				}
 				h2 {
+					background-color: $pink-transparent;
+					padding: $unit;
+				}
+				a h2 {
 					background-color: $pink-transparent;
 					padding: $unit;
 					@include hover-transition;
@@ -95,6 +102,13 @@ main {
 		@include breakpoint( $break-m ) {
 			.post {
 				grid-template-columns: 1fr 1fr;
+				.post-primary-content {
+					.post-navigation {
+						margin: 0 $unit $unit;
+					}
+				}
+
+
 			}
 		}
 

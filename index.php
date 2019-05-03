@@ -21,7 +21,10 @@
 					<?php endwhile;
 				endif;
 			?>
-			<div class="navigation"><p><?php posts_nav_link(); ?></p></div>
+			<div class="post-navigation">
+				<p><?php posts_nav_link(' || ',' &laquo; Go
+Forward In Time','Go Back in Time &raquo; '); ?></p>
+			</div>
 		</div> <!-- .content -->
 	</div> <!-- .container -->
 </main>
