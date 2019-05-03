@@ -12,6 +12,10 @@ main {
 			.post-primary-content {
 				display: grid;
 
+				grid-template-columns: auto;
+				background-color: blue;
+				color: black;
+
 				div.thumbnail-img {
 					min-height: 400px;
 					background-repeat: no-repeat;

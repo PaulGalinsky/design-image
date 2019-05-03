@@ -299,7 +299,10 @@ main .content .post {
     content: "";
     display: table; }
   main .content .post .post-primary-content {
-    display: grid; }
+    display: grid;
+    grid-template-columns: auto;
+    background-color: blue;
+    color: black; }
     main .content .post .post-primary-content div.thumbnail-img {
       min-height: 400px;
       background-repeat: no-repeat;

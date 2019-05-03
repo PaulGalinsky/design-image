@@ -21,6 +21,7 @@
 					<?php endwhile;
 				endif;
 			?>
+			<div class="navigation"><p><?php posts_nav_link(); ?></p></div>
 		</div> <!-- .content -->
 	</div> <!-- .container -->
 </main>

@@ -11,6 +11,9 @@
 								<!-- next two lines pull in the featured image as a background image as at https://bit.ly/2ZMtvt4 -->
 								<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
 								<div class="thumbnail-img" style="background-image: url('<?php echo $backgroundImg[0]; ?>')"></div>
+								<div class="navigation">
+								<?php previous_post_link('&laquo; &laquo; %', '', 'yes'); ?> | <?php next_post_link('% &raquo; &raquo; ', '', 'yes'); ?>
+								</div>
 							</div>
 
 							<div class="post-secondary-content">
