@@ -287,6 +287,15 @@ header {
       margin: 3rem 8%;
       padding: 3rem 8%; } }
 
+main .content h2.tag {
+  color: #ffffff;
+  margin: 3rem auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #9a9a9a; }
+  main .content h2.tag span.the-tag {
+    text-transform: uppercase; }
+
 main .content .post {
   margin-bottom: 8rem;
   position: relative;
@@ -369,8 +378,10 @@ main .content .post {
 @media only screen and (min-width: 900px) {
   main .content .post {
     grid-template-columns: 1fr 1fr; }
+    main .content .post .post-primary-content div.thumbnail-img {
+      margin-left: 0; }
     main .content .post .post-primary-content .post-navigation {
-      margin: 0 1rem 1rem; } }
+      margin: 0 1rem 1rem 0; } }
 
 .single main .content .post {
   margin-bottom: 1rem; }

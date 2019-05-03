@@ -1,5 +1,15 @@
 main {
 	.content {
+		h2.tag {
+			color: $white;
+			margin: $unit-triple auto;
+			padding: $unit-double;
+			text-align: center;
+			background-color: $grey-lighter;
+			span.the-tag {
+				text-transform: uppercase;
+			}
+		}
 		.post {
 			@include clearfix();
 			margin-bottom: $unit-octuple;
@@ -103,9 +113,14 @@ main {
 			.post {
 				grid-template-columns: 1fr 1fr;
 				.post-primary-content {
-					.post-navigation {
-						margin: 0 $unit $unit;
+					div.thumbnail-img {
+						margin-left: 0;
 					}
+
+					.post-navigation {
+						margin: 0 $unit $unit 0;
+					}
+
 				}
 
 
