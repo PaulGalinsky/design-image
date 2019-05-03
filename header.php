@@ -16,9 +16,13 @@
 						</a>
 					</h1>
 				</div><!-- .logo -->
-				<div class="intro">
-					<p>Hello, Paul here! I’ve retired designimage.eu and I'm now half of the magnificent web and print duo <a href="https://www.lumpylemon.co.uk">Lumpy Lemon</a>.</p>
-					<p>Oh, and if we haven’t spoken in a while, I’ve married, changed my surname to Galinsky and moved to Edinburgh. It’s all change!</p>
-				</div> <!-- .intro -->
+				<?php if ( is_home() ) : echo	'
+					<div class="intro">
+						<p>Hello, Paul here! I’ve retired designimage.eu and am now half of the magnificent web and print duo <a href="https://www.lumpylemon.co.uk">Lumpy Lemon</a>.</p>
+						<p>Oh, and if we haven’t spoken in a while, I’ve married, changed my surname to Galinsky and moved to Edinburgh. It’s all change!</p>
+					</div>
+				'; endif; ?>
+
+
 			</div><!-- .container -->
 		</header>

@@ -6,13 +6,9 @@ header {
 												top left;
 	background-repeat: 		repeat-x,
 												repeat;
-
-
-
 	border-top: $unit-quarter solid $pink-transparent;
 	padding-bottom: $unit-octuple;
 	margin-bottom:  -$unit-septuple;
-
 
 	.logo {
 		h1 {
@@ -29,13 +25,6 @@ header {
 					background-color: $pink;
 				}
 
-
-			// &:hover {
-			// 	background-color: $pink;
-			// 	height: 128px;
-			// 	margin-top: -8px;
-			// 	padding-top: 8px;
-			// }
 			img {
 				margin-left: 15%;
 				padding-top: 15%;
