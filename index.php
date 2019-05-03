@@ -21,9 +21,21 @@
 					<?php endwhile;
 				endif;
 			?>
+
 			<div class="post-navigation">
-				<p><?php posts_nav_link(' || ',' &laquo; Go
-Forward In Time','Go Back in Time &raquo; '); ?></p>
+				<div class="prev">
+					<?php if( get_previous_posts_link() ) :
+						previous_posts_link( '&laquo; Newer Work &laquo;' );
+					endif; ?>
+				</div>
+				<div class="next">
+					<?php if( get_next_posts_link() ) :
+						next_posts_link( '&raquo; Older Work &raquo;', 0 );
+					endif; ?>
+				</div>
+			</div>
+
+
 			</div>
 		</div> <!-- .content -->
 	</div> <!-- .container -->

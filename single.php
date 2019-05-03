@@ -12,11 +12,11 @@
 								<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
 								<div class="thumbnail-img" style="background-image: url('<?php echo $backgroundImg[0]; ?>')"></div>
 								<div class="post-navigation">
-									<div class="prev">
-										<?php previous_post_link('%link', '&laquo; Older Stuff &laquo;' ); ?>
-									</div>
 									<div class="next">
-										<?php next_post_link('%link', '&raquo; Newer Stuff &raquo; '); ?>
+										<?php next_post_link('%link', '&laquo; Newer Work &laquo; '); ?>
+									</div>
+									<div class="prev">
+										<?php previous_post_link('%link', '&raquo; Older Work &raquo;' ); ?>
 									</div>
 								</div>
 							</div>
