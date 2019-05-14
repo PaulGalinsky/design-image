@@ -11,7 +11,7 @@
 			<div class="container">
 				<div class="logo">
 					<h1>
-						<a href="<?php echo site_url(); ?>" rel="home" title="Link to Lumpy Lemon homepage" aria-label="Link to Lumpy Lemon homepage">
+						<a href="<?php echo site_url(); ?>" rel="home" title="Link to <?php bloginfo( 'name' ); ?> homepage" aria-label="Link to <?php bloginfo( 'name' ); ?> homepage">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" width="160" height="160" alt="Design Image Logo" />
 						</a>
 					</h1>
