@@ -144,6 +144,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/css/main_page.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/awesome.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/css/main_single.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -352,6 +365,25 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/page.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page.php",
+		"oF": 0
+		},
+	"/screenshot.png": {
+		"ft": 32768,
+		"iS": 557180,
+		"oA": 0,
+		"oAP": "/screenshot.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"/single.php": {
 		"cB": 0,

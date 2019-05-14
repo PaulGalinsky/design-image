@@ -47,6 +47,9 @@ $unit-octuple:	      $unit * 8;
 
 // brand graphical flourish:
 
+@mixin hover-transition {
+	transition: all 0.4s linear;
+}
 
 
 
@@ -69,11 +72,25 @@ p, li, label, a {
 	}
 }
 
+p a{
+	@include hover-transition;
+	&:hover {
+		color: $pink;
+	}
+}
+
+
 h1, h2 {
 	color: $white;
 	font-family: $secondary-font;
 	font-weight: $secondary-font-weight-normal;
 	margin-bottom: $unit-zero;
+	background-color: $pink-transparent;
+}
+
+h3 {
+	color: $pink;
+	margin: $unit-double 0 $unit;
 }
 
 h1 { font-size: 2.5rem   /* 40px / 16px */ }
@@ -85,9 +102,6 @@ li { font-size: 1.25rem  /* 20px / 16px */ }
 label { font-size: 1.125rem  /* 18px / 16px */ }
 
 
-@mixin hover-transition {
-	transition: all 0.4s linear;
-}
 
 
 

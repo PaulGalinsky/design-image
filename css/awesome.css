@@ -198,11 +198,21 @@ p, li, label, a {
     color: inherit;
     text-decoration: underline; }
 
+p a {
+  transition: all 0.4s linear; }
+  p a:hover {
+    color: #ff0066; }
+
 h1, h2 {
   color: #ffffff;
   font-family: "Lemon", cursive;
   font-weight: 400;
-  margin-bottom: 0rem; }
+  margin-bottom: 0rem;
+  background-color: rgba(255, 0, 102, 0.6); }
+
+h3 {
+  color: #ff0066;
+  margin: 2rem 0 1rem; }
 
 h1 {
   font-size: 2.5rem; }
@@ -287,15 +297,6 @@ header {
       margin: 3rem 8%;
       padding: 3rem 8%; } }
 
-main .content h2.tag {
-  color: #ffffff;
-  margin: 3rem auto;
-  padding: 2rem;
-  text-align: center;
-  background-color: #9a9a9a; }
-  main .content h2.tag span.the-tag {
-    text-transform: uppercase; }
-
 main .content .post-navigation {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -338,10 +339,6 @@ main .content .post {
       margin: 2rem 1rem 1rem; }
   main .content .post .post-secondary-content {
     align-self: center; }
-    main .content .post .post-secondary-content p a {
-      transition: all 0.4s linear; }
-      main .content .post .post-secondary-content p a:hover {
-        color: #ff0066; }
     main .content .post .post-secondary-content a.read-more {
       display: inline;
       color: #ff0066;
@@ -349,7 +346,6 @@ main .content .post {
       main .content .post .post-secondary-content a.read-more:hover {
         color: #222222; }
     main .content .post .post-secondary-content h2 {
-      background-color: rgba(255, 0, 102, 0.6);
       padding: 1rem; }
     main .content .post .post-secondary-content a h2 {
       background-color: rgba(255, 0, 102, 0.6);
@@ -381,6 +377,18 @@ main .content .post {
       margin-left: 0; }
     main .content .post .post-primary-content .post-navigation {
       margin: 0 1rem 1rem 0; } }
+
+.page main .content {
+  max-width: 60rem;
+  margin: 0 auto; }
+
+.page main .page-content {
+  margin: 4rem 1rem; }
+
+.page main h2 {
+  color: #ff0066;
+  background-color: transparent;
+  margin: 1rem 0; }
 
 .single main .content .post {
   margin-bottom: 1rem; }
