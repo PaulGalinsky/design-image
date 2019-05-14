@@ -17,6 +17,14 @@
 		"oAP": "/ DI Local Folder Alias",
 		"oF": 0
 		},
+	"/404.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/404.php",
+		"oF": 0
+		},
 	"/css/1_resets.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -131,7 +139,7 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/css/main_home.scss": {
+	"/css/main_404.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,

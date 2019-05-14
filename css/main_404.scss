@@ -1,0 +1,18 @@
+.error404 main {
+	.content{
+		max-width: 60rem;
+		margin: 0 auto;
+	}
+	.page-content {
+		margin: $unit-quadruple $unit;
+	}
+	h2 {
+		text-align: center;
+		color: $pink;
+		background-color: transparent;
+		margin: $unit 0;
+	}
+	p {
+		text-align: center;
+	}
+} // .page main
