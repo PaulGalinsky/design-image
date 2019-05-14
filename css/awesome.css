@@ -235,6 +235,17 @@ li {
 label {
   font-size: 1.125rem; }
 
+.cookie-notice {
+  background-color: #ff0066; }
+  .cookie-notice p {
+    color: white;
+    text-align: center;
+    margin: 0.5rem auto; }
+    .cookie-notice p a {
+      color: white; }
+      .cookie-notice p a:hover {
+        color: #222222; }
+
 html {
   height: 100%; }
 

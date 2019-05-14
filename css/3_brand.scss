@@ -102,7 +102,20 @@ li { font-size: 1.25rem  /* 20px / 16px */ }
 label { font-size: 1.125rem  /* 18px / 16px */ }
 
 
-
+.cookie-notice {
+	background-color: $pink;
+	p {
+		color: white;
+		text-align: center;
+		margin: $unit-half auto;
+		a {
+			color: white;
+			&:hover {
+				color: $black;
+			}
+		}
+	}
+}
 
 
 
