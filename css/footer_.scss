@@ -53,18 +53,20 @@ footer {
 	}
 
 	div.logo {
+		border-bottom: rgba(255,0,102,0) solid 8px;
+		background-clip: padding-box;
+		margin-bottom: -8px;
 		justify-self: end;
 		align-self: end;
 		margin-right: 10%;
 		background-color: $pink-transparent;
-		height: 120px;
+		height: 128px;
 		width: 120px;
 		@include hover-transition;
 		&:hover{
-			margin-bottom: -$unit-half;
 			background-color: $pink;
-			height: 128px; // can't use $unit as would mix rem and px
-			}
+			border-bottom: $pink;
+		}
 		img {
 			width: 70%;
 			height: auto;

@@ -467,17 +467,19 @@ footer {
       footer .footer-links li a.top:hover:before {
         background: url("../images/footer-top-p.svg") no-repeat center center; }
   footer div.logo {
+    border-bottom: rgba(255, 0, 102, 0) solid 8px;
+    background-clip: padding-box;
+    margin-bottom: -8px;
     justify-self: end;
     align-self: end;
     margin-right: 10%;
     background-color: rgba(255, 0, 102, 0.6);
-    height: 120px;
+    height: 128px;
     width: 120px;
     transition: all 0.4s linear; }
     footer div.logo:hover {
-      margin-bottom: -0.5rem;
       background-color: #ff0066;
-      height: 128px; }
+      border-bottom: #ff0066; }
     footer div.logo img {
       width: 70%;
       height: auto;
