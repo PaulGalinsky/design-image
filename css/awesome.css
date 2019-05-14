@@ -235,6 +235,14 @@ li {
 label {
   font-size: 1.125rem; }
 
+html {
+  height: 100%; }
+
+body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto; }
+
 .container {
   display: grid;
   max-width: 1200px;
