@@ -420,6 +420,12 @@ main .content .post {
 .single main .content .post {
   margin-bottom: 1rem; }
 
+.tag main h2.tag {
+  text-align: center;
+  color: #ff0066;
+  background-color: transparent;
+  margin: 1rem 0; }
+
 footer {
   background-image: url("../images/footer-background-1.png");
   background-position: top left;
