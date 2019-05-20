@@ -163,10 +163,10 @@
 }));
 
 
+// Cookie notice
 jQuery( document ).ready( function( $ ) {
-
 	var isSecure = (window.location.protocol=='https:');
 	if(!Cookies.get('seen_cookie_notice')){
 			Cookies.set('seen_cookie_notice',1,{expires:365,secure:isSecure});
-			$('#site').prepend('<div class="cookie-notice"><p>This website uses cookies and its coder chomps them. Skidaddle, <a href="http://localhost:5757/privacy-policy/">Learn more</a> or carry on regardless.</p></div>');}
+			$('#site').prepend('<div class="cookie-notice"><p>To stay awesome, designimage.eu stores <a href="http://localhost:5757/privacy-policy/">a few cookies</a> on your hardware. If you don\'t consent to this, please navigate away then delete any unwanted cookies using your browser\'s settings.</p></div>');}
 });
