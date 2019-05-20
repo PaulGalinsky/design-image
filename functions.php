@@ -5,8 +5,6 @@ function awesome_script_enqueue() {
 	wp_enqueue_script('customjs', get_template_directory_uri().'/js/awesome.js', array(), '1.0.0', true);
 };
 
-add_theme_support( 'post-thumbnails' );
-
 add_action('wp_enqueue_scripts', 'awesome_script_enqueue');
 
 
@@ -23,6 +21,12 @@ function remove_menus() {
 }
 add_action( 'admin_menu', 'remove_menus' );
 
+
+function di_wordpress_setup(){
+	add_theme_support( 'post-thumbnails' ); // aka featured images
+}
+
+add_action( 'after_setup_theme', 'di_wordpress_setup' );
 
 
 // Get just one paragraph for home page https://wordpress.stackexchange.com/questions/127159/grab-the-first-paragraph-of-each-post

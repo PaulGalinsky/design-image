@@ -8,15 +8,15 @@
 						<div <?php post_class(); ?>>
 
 							<div class="post-primary-content">
-								<!-- next two lines pull in the featured image as a background image as at https://bit.ly/2ZMtvt4 -->
-								<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
-								<div class="thumbnail-img" style="background-image: url('<?php echo $backgroundImg[0]; ?>')"></div>
+								<div class="featured-image">
+									<?php the_post_thumbnail(); ?>
+								</div>
 								<div class="post-navigation">
-									<div class="next">
-										<?php next_post_link('%link', '&laquo; Newer Work &laquo; '); ?>
-									</div>
 									<div class="prev">
-										<?php previous_post_link('%link', '&raquo; Older Work &raquo;' ); ?>
+										<?php previous_post_link('%link', '&laquo; Older Work &laquo;' ); ?>
+									</div>
+									<div class="next">
+										<?php next_post_link('%link', '&raquo; Newer Work &raquo; '); ?>
 									</div>
 								</div>
 							</div>

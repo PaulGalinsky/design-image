@@ -5,7 +5,7 @@ main {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			grid-column-gap: $unit;
-			margin: 0 0 $unit;
+			margin: $unit 0;
 			div{
 				align-self: start;
 				a {
@@ -36,20 +36,26 @@ main {
 			.post-primary-content {
 				display: grid;
 				grid-template-columns: auto;
-				div.thumbnail-img {
-					min-height: 400px;
-					background-repeat: no-repeat;
-					background-size: auto 100%;
-					background-position: center;
-					margin: $unit-double $unit $unit;
+				div.featured-image {
+					width: 60%;
+					margin: 0 auto;
+					align-self: center;
+					img {
+						margin: $unit auto;
+						min-width: 100%;
+					}
+					a img {
+						border-bottom: solid $unit-half $white;
+						@include hover-transition;
+						&:hover {
+							border-bottom: solid $unit-half $pink;
+						}
+					}
 				}
 			}
 
-
-
 			.post-secondary-content {
 				align-self: center;
-
 				a.read-more {
 					display: inline;
 					color: $pink;
@@ -69,7 +75,6 @@ main {
 						background-color: $pink;
 					}
 				}
-
 				ul.tags {
 					margin: $unit -4px;
 					li {
@@ -97,16 +102,16 @@ main {
 			.post {
 				grid-template-columns: 1fr 1fr;
 				.post-primary-content {
-					div.thumbnail-img {
-						margin-left: 0;
-					}
-					.post-navigation {
-						margin: 0 $unit $unit 0;
+					margin-right: $unit;
+					div.featured-image {
+						width: 100%;
+						img {
+							margin: 0;
+						}
 					}
 				}
 			}
 		} //$break-m
-
 
 	} //.content
 } //main
