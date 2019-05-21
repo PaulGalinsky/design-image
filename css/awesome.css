@@ -238,6 +238,7 @@ label {
 .cookie-notice {
   background-color: #ff0066; }
   .cookie-notice p {
+    width: 80%;
     color: white;
     text-align: center;
     margin: 0.5rem auto; }
@@ -424,6 +425,11 @@ main .content .post {
 .page main .content {
   max-width: 60rem;
   margin: 0 auto; }
+
+.page main h2 {
+  color: #ff0066;
+  background-color: transparent;
+  margin: 1rem 0; }
 
 .single main .content .post {
   margin-bottom: 1rem; }
