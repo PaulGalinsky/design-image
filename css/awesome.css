@@ -425,6 +425,8 @@ main .content .post {
 .page main .content {
   max-width: 60rem;
   margin: 0 auto; }
+  .page main .content .page-content {
+    margin: 0 1rem; }
 
 .page main h2 {
   color: #ff0066;

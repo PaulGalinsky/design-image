@@ -2,6 +2,9 @@
 	.content{
 		max-width: 60rem;
 		margin: 0 auto;
+		.page-content {
+			margin: 0 $unit;
+		}
 	}
 	h2 {
 		color: $pink;
