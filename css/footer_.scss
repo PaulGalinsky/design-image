@@ -62,15 +62,23 @@ footer {
 		background-color: $pink-transparent;
 		height: 128px;
 		width: 120px;
+		position: relative;
 		@include hover-transition;
 		&:hover{
 			background-color: $pink;
 			border-bottom: $pink;
 		}
-		img {
-			width: 70%;
-			height: auto;
-			margin: 15%;
+		a {
+			position: absolute;
+			top: 15px;
+			left: 20px;
+			display: block;
+			width: 80px;
+			height: 80px;
+				img {
+					height: 100%;
+					width: 100%;
+				}
 		}
 	}
 
