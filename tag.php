@@ -5,7 +5,6 @@
 			<?php
 				if( have_posts() ): ?>
 						<h2 class="tag"><?php single_tag_title('Here\'s everything tagged \'<span class="the-tag">'); ?></span>'. Enjoy:</h2>
-
 				<?php
 					while ( have_posts() ): the_post();?>
 						<div <?php post_class(); ?>>
