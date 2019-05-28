@@ -343,7 +343,7 @@ main .content .post {
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  margin: 0 1rem 8rem 1rem; }
+  margin: 0 1rem 5rem 1rem; }
   main .content .post:after {
     clear: both;
     content: "";
@@ -398,7 +398,8 @@ main .content .post {
 
 @media only screen and (min-width: 900px) {
   main .content .post {
-    grid-template-columns: 1fr 1fr; }
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 8rem; }
     main .content .post .post-primary-content {
       margin-right: 1rem; }
       main .content .post .post-primary-content div.featured-image {
@@ -475,10 +476,10 @@ footer {
         color: #ff0066; }
   footer .footer-links {
     margin-left: 1rem; }
+    footer .footer-links ul {
+      margin-left: 1.5rem; }
     footer .footer-links li a {
       transition: all 0.4s linear;
-      margin-left: 1rem;
-      padding-left: 1rem;
       position: relative; }
       footer .footer-links li a:before {
         transition: all 0.4s linear;
@@ -486,7 +487,7 @@ footer {
         width: 1rem;
         height: 1.5rem;
         position: absolute;
-        left: -1rem; }
+        left: -1.5rem; }
       footer .footer-links li a.lemon:before {
         background: url("../images/footer-lemon.svg") no-repeat center center; }
       footer .footer-links li a.email:before {
@@ -533,6 +534,3 @@ footer {
       footer div.logo a img {
         height: 100%;
         width: 100%; }
-  @media only screen and (min-width: 1272px) {
-    footer .footer-links {
-      margin-left: 0; } }

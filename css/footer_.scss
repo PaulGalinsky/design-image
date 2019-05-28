@@ -27,10 +27,11 @@ footer {
 
 	.footer-links {
 		margin-left: $unit;
+		ul {
+			margin-left: 1.5rem;
+		}
 		li a {
 			@include hover-transition;
-			margin-left: 1rem;
-			padding-left: 1rem;
 			position: relative;
 			&:before {
 				@include hover-transition;
@@ -38,7 +39,7 @@ footer {
 				width: 1rem;
 				height: 1.5rem;
 				position: absolute;
-				left: -1rem;
+				left: -1.5rem;
 			}
 			&.lemon:before {background: url('../images/footer-lemon.svg') no-repeat center center;}
 			&.email:before {background: url('../images/footer-email.svg') no-repeat center center;}
@@ -85,12 +86,6 @@ footer {
 					height: 100%;
 					width: 100%;
 				}
-		}
-	}
-
-	@include breakpoint( $break-l + 72 ){
-		.footer-links {
-			margin-left: 0;
 		}
 	}
 } //footer

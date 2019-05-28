@@ -32,7 +32,7 @@ main {
 			position: relative;
 			display: grid;
 			grid-template-columns: 1fr;
-			margin: 0 $unit $unit-octuple $unit;
+			margin: 0 $unit $unit-quintuple $unit;
 			.post-primary-content {
 				display: grid;
 				grid-template-columns: auto;
@@ -101,6 +101,7 @@ main {
 		@include breakpoint( $break-m ) {
 			.post {
 				grid-template-columns: 1fr 1fr;
+				margin-bottom: $unit-octuple;
 				.post-primary-content {
 					margin-right: $unit;
 					div.featured-image {
