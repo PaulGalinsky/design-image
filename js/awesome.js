@@ -163,10 +163,28 @@
 }));
 
 
-// Cookie notice
+
+
+// JQuery calls on document ready
 jQuery( document ).ready( function( $ ) {
+
+	// cookie notice
 	var isSecure = (window.location.protocol=='https:');
 	if(!Cookies.get('seen_cookie_notice')){
 			Cookies.set('seen_cookie_notice',1,{expires:365,secure:isSecure});
 			$('#site').prepend('<div class="cookie-notice"><p>To stay awesome, designimage.eu stores <a href="http://localhost:5757/privacy-policy/">a few cookies</a> on your hardware. If you don\'t consent to this, please navigate away then delete any unwanted cookies using your browser\'s settings.</p></div>');}
+
+		// smooth scroll
+		$('.scroll_to').click(function(e){
+					var jump = $(this).attr('href');
+					var new_position = $(jump).offset();
+					$('html, body').stop().animate({ scrollTop: new_position.top }, 1000);
+					e.preventDefault();
+			});
+
 });
+
+
+
+
+

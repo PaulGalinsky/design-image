@@ -11,15 +11,15 @@
 				</ul>
 			</div><!-- .footer-links -->
 
-
 			<div class="logo">
-				<a href="<?php echo site_url(); ?>" rel="home" title="Return to the top of the homepage" aria-label="Return to the top of the homepage">
+				<?php if ( is_home() ) { ?>
+					<a href="#site" class="scroll_to" title="Back to top" aria-label="Back to top">
+				<?php } else { ?>
+					<a href="<?php echo site_url(); ?>" rel="home" title="Return to the homepage" aria-label="Return to the homepage">
+				<?php } ?>
 					<img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" width="160" height="160" alt="Design Image Logo" aria-hidden />
 				</a>
 			</div><!-- .logo -->
-
-
-
 
 		</div><!-- .container -->
 	</footer>

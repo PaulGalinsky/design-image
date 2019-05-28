@@ -25,20 +25,19 @@
 			?>
 
 			<div class="post-navigation">
-			<div class="next">
-					<?php if( get_next_posts_link() ) :
-						next_posts_link( '&laquo; Older Work &laquo;', 0 );
-					endif; ?>
-				</div>
-				<div class="prev">
-					<?php if( get_previous_posts_link() ) :
-						previous_posts_link( '&raquo; Newer Work &raquo;' );
-					endif; ?>
+				<div class="next">
+						<?php if( get_next_posts_link() ) :
+							next_posts_link( '&laquo; Older Work &laquo;', 0 );
+						endif; ?>
+					</div>
+					<div class="prev">
+						<?php if( get_previous_posts_link() ) :
+							previous_posts_link( '&raquo; Newer Work &raquo;' );
+						endif; ?>
+					</div>
 				</div>
 			</div>
 
-
-			</div>
 		</div> <!-- .content -->
 	</div> <!-- .container -->
 </main>
