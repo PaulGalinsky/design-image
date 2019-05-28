@@ -494,20 +494,24 @@ footer {
   footer div.logo {
     height: 128px;
     width: 120px;
-    margin-right: 10%;
-    border-bottom: 8px solid transparent;
-    background-clip: padding-box;
-    margin-bottom: -8px;
+    margin: 0 10% -8px 1rem;
     justify-self: end;
     align-self: end;
-    background-color: rgba(255, 0, 102, 0.6);
     position: relative;
+    z-index: 1;
     transition: all 0.4s linear; }
+    footer div.logo:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 8px;
+      left: 0;
+      right: 0;
+      background: rgba(255, 0, 102, 0.6);
+      z-index: -1; }
     footer div.logo:hover {
-      background-color: #ff0066;
-      border-bottom: 8px solid #ff0066; }
+      background: #ff0066; }
     footer div.logo a {
-      border-image-width: 0;
       position: absolute;
       top: 15px;
       left: 20px;

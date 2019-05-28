@@ -55,21 +55,26 @@ footer {
 	div.logo {
 		height: 128px;
 		width: 120px;
-		margin-right: 10%;
-		border-bottom: 8px solid transparent;
-		background-clip: padding-box;
-		margin-bottom: -8px;
+		margin: 0 10% -8px $unit;
 		justify-self: end;
 		align-self: end;
-		background-color: $pink-transparent;
 		position: relative;
+		z-index: 1;
 		@include hover-transition;
+		&:after{
+			content:"";
+			position:absolute;
+			top:0;
+			bottom:8px;
+			left:0;
+			right:0;
+			background: $pink-transparent;
+			z-index:-1;
+		}
 		&:hover{
-			background-color: $pink;
-			border-bottom: 8px solid $pink;
+			background: $pink;
 		}
 		a {
-			border-image-width: 0;
 			position: absolute;
 			top: 15px;
 			left: 20px;
