@@ -2,6 +2,42 @@
 	.content {
 		.post {
 			margin-bottom: $unit;
+			.post-primary-content {
+				div.featured-image {
+					width: 100%;
+					img {
+					margin-bottom: 0;
+					}
+				}
+			}
 		}
 	}
+
+	@include breakpoint( $break-s ) {
+		.content {
+			.post {
+				.post-primary-content {
+					div.featured-image {
+						width: 70%;
+					}
+				}
+			}
+		}
+	} //$break-s
+
+	@include breakpoint( $break-m ) {
+		.content {
+			.post {
+				.post-primary-content {
+					div.featured-image {
+						width: 100%;
+					}
+				}
+			}
+		}
+	} //$break-s
+
+
+
+
 }

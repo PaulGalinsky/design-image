@@ -278,7 +278,7 @@ header {
   padding-bottom: 8rem;
   margin-bottom: -7rem; }
   header .logo h1 {
-    margin-left: 25px;
+    margin-left: 1rem;
     width: 120px;
     height: 120px;
     background-color: rgba(255, 0, 102, 0.6);
@@ -352,7 +352,7 @@ main .content .post {
     display: grid;
     grid-template-columns: auto; }
     main .content .post .post-primary-content div.featured-image {
-      width: 60%;
+      width: 70%;
       margin: 0 auto;
       align-self: center; }
       main .content .post .post-primary-content div.featured-image img {
@@ -435,6 +435,18 @@ main .content .post {
 
 .single main .content .post {
   margin-bottom: 1rem; }
+  .single main .content .post .post-primary-content div.featured-image {
+    width: 100%; }
+    .single main .content .post .post-primary-content div.featured-image img {
+      margin-bottom: 0; }
+
+@media only screen and (min-width: 600px) {
+  .single main .content .post .post-primary-content div.featured-image {
+    width: 70%; } }
+
+@media only screen and (min-width: 900px) {
+  .single main .content .post .post-primary-content div.featured-image {
+    width: 100%; } }
 
 .tag main h2.tag {
   text-align: center;
