@@ -5,7 +5,7 @@
 			<?php
 				if( have_posts() ):
 					while ( have_posts() ): the_post();?>
-						<div <?php post_class(); ?>>
+						<article <?php post_class(); ?>>
 
 							<div class="post-primary-content">
 								<div class="featured-image">
@@ -27,7 +27,7 @@
 								<?php the_tags( '<ul class="tags"><li>', '</li><li>', '</li></ul>' ); ?>
 							</div>
 
-						</div><!-- post_class() -->
+						</article><!-- post_class() -->
 					<?php endwhile;
 				endif;
 			?>
