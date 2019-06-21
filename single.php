@@ -9,7 +9,7 @@
 
 							<div class="post-primary-content">
 								<div class="featured-image">
-									<?php the_post_thumbnail(); ?>
+									<?php the_post_thumbnail('medium'); ?>
 								</div>
 								<div class="post-navigation">
 									<div class="prev">
