@@ -14,9 +14,9 @@
 								</div>
 							</div>
 							<div class="post-secondary-content">
-								<a href="<?php the_permalink(); ?>" class="read-more"><h2><?php the_title(); ?></h2></a>
+								<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
 								<p><?php echo get_first_paragraph(); ?></p>
-								<a href="<?php the_permalink(); ?>" class="read-more"> >> Read more >> </a>
+								<a href="<?php the_permalink(); ?>" class="read-more">Read more</a>
 								<?php the_tags( '<ul class="tags"><li>', '</li><li>', '</li></ul>' ); ?>
 							</div>
 						</div>
@@ -25,14 +25,14 @@
 			?>
 
 			<div class="post-navigation">
-				<div class="next">
+				<div class="prev">
 						<?php if( get_next_posts_link() ) :
-							next_posts_link( '&laquo; Older Work &laquo;', 0 );
+							next_posts_link( 'Older Work', 0 );
 						endif; ?>
 					</div>
-					<div class="prev">
+					<div class="next">
 						<?php if( get_previous_posts_link() ) :
-							previous_posts_link( '&raquo; Newer Work &raquo;' );
+							previous_posts_link( 'Newer Work' );
 						endif; ?>
 					</div>
 				</div>

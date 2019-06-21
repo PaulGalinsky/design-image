@@ -13,10 +13,10 @@
 								</div>
 								<div class="post-navigation">
 									<div class="prev">
-										<?php previous_post_link('%link', '&laquo; Older Work &laquo;' ); ?>
+										<?php previous_post_link('%link', 'Older Work' ); ?>
 									</div>
 									<div class="next">
-										<?php next_post_link('%link', '&raquo; Newer Work &raquo; '); ?>
+										<?php next_post_link('%link', 'Newer Work'); ?>
 									</div>
 								</div>
 							</div>

@@ -60,6 +60,12 @@ main {
 					display: inline;
 					color: $pink;
 					@include hover-transition;
+					&:before {
+						content: '\00bb\00a0';
+					}
+					&:after {
+						content: '\00a0\00bb';
+					}
 					&:hover {
 						color: $black;
 					}
@@ -97,6 +103,25 @@ main {
 				}
 			}
 		} //.post
+
+		.post-navigation {
+			.next a {
+			 &:before {
+				 content: '\00bb\00a0';
+			 }
+			 &:after {
+				 content: '\00a0\00bb';
+			 }
+		 }
+		 .prev a {
+			 &:before {
+				 content: '\00ab\00a0';
+			 }
+			 &:after {
+				 content: '\00a0\00ab';
+			 }
+		 }
+	 }
 
 		@include breakpoint( $break-m ) {
 			.post {
