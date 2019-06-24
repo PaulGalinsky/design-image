@@ -6,11 +6,16 @@
 				div.featured-image {
 					width: 100%;
 					img {
-					margin-bottom: 0;
+					// margin-bottom: 0;
 					}
 				}
 			}
 		}
+	}
+
+	.post-navigation {
+			margin-left: $unit;
+			margin-right: $unit;
 	}
 
 	@include breakpoint( $break-s ) {
@@ -34,6 +39,13 @@
 					}
 				}
 			}
+			.post-navigation {
+				grid-column-gap: 0;
+				.prev {
+					margin-right: $unit;
+				}
+			}
+
 		}
-	} //$break-s
+	} //$break-m
 }

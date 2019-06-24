@@ -1,32 +1,6 @@
 main {
 	.content {
 
-		.post-navigation {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			grid-column-gap: $unit;
-			margin: $unit 0;
-			div{
-				align-self: start;
-				a {
-					display: inline-block;
-					width: 100%;
-					height: 100%;
-					padding: 1rem;
-					text-align: center;
-					margin: 0;
-					background-color: $pink-transparent;
-					color: $white;
-					font-family: $secondary-font;
-					font-weight: $secondary-font-weight-normal;
-					@include hover-transition;
-					&:hover {
-						background-color: $pink;
-					}
-				}
-			}
-		} //.post-navigation
-
 		.post {
 			@include clearfix();
 			position: relative;
@@ -105,23 +79,48 @@ main {
 		} //.post
 
 		.post-navigation {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: $unit;
+			margin: $unit 0;
+			div{
+				align-self: start;
+				a {
+					display: inline-block;
+					width: 100%;
+					height: 100%;
+					padding: 1rem;
+					text-align: center;
+					margin: 0;
+					background-color: $pink-transparent;
+					color: $white;
+					font-family: $secondary-font;
+					font-weight: $secondary-font-weight-normal;
+					@include hover-transition;
+					&:hover {
+						background-color: $pink;
+					}
+				}
+			}
 			.next a {
-			 &:before {
-				 content: '\00bb\00a0';
-			 }
-			 &:after {
-				 content: '\00a0\00bb';
-			 }
-		 }
-		 .prev a {
-			 &:before {
-				 content: '\00ab\00a0';
-			 }
-			 &:after {
-				 content: '\00a0\00ab';
-			 }
-		 }
-	 }
+				&:before {
+					content: '\00bb\00a0';
+				}
+				&:after {
+					content: '\00a0\00bb';
+				}
+			}
+			.prev a {
+				&:before {
+					content: '\00ab\00a0';
+				}
+				&:after {
+					content: '\00a0\00ab';
+				}
+			}
+		} //.post-navigation
+
+
 
 		@include breakpoint( $break-m ) {
 			.post {

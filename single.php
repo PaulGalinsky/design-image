@@ -11,14 +11,6 @@
 								<div class="featured-image">
 									<?php the_post_thumbnail('medium'); ?>
 								</div>
-								<div class="post-navigation">
-									<div class="prev">
-										<?php previous_post_link('%link', 'Older Work' ); ?>
-									</div>
-									<div class="next">
-										<?php next_post_link('%link', 'Newer Work'); ?>
-									</div>
-								</div>
 							</div>
 
 							<div class="post-secondary-content">
@@ -28,6 +20,16 @@
 							</div>
 
 						</article><!-- post_class() -->
+
+						<div class="post-navigation">
+							<div class="prev">
+								<?php previous_post_link('%link', 'Older Work' ); ?>
+							</div>
+							<div class="next">
+								<?php next_post_link('%link', 'Newer Work'); ?>
+							</div>
+						</div>
+
 					<?php endwhile;
 				endif;
 			?>
