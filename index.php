@@ -14,8 +14,8 @@
 								</div>
 							</div>
 							<div class="post-secondary-content">
-								<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
-								<p><?php echo get_first_paragraph(); ?></p>
+							<a href="<?php the_permalink(); ?>"><?php the_title('<h2>','</h2>'); ?></a>
+								<?php echo get_first_paragraph(); ?>
 								<a href="<?php the_permalink(); ?>" class="read-more">Read more</a>
 								<?php the_tags( '<ul class="tags"><li>', '</li><li>', '</li></ul>' ); ?>
 							</div>

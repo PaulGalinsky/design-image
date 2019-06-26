@@ -198,6 +198,9 @@ p, li, label, a {
     color: inherit;
     text-decoration: underline; }
 
+p {
+  margin-top: 1.5rem; }
+
 p a {
   transition: all 0.4s linear; }
   p a:hover {

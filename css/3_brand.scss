@@ -71,6 +71,9 @@ p, li, label, a {
 		text-decoration: underline;
 	}
 }
+p {
+	margin-top: $unit-plus-half;
+}
 
 p a{
 	@include hover-transition;
