@@ -111,7 +111,8 @@ label { font-size: 1.125rem  /* 18px / 16px */ }
 		width: 80%;
 		color: white;
 		text-align: center;
-		margin: $unit-half auto;
+		margin: 0 auto;
+		padding: $unit-half 0;
 		a {
 			color: white;
 			&:hover {
