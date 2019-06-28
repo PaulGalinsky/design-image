@@ -55,6 +55,9 @@ header {
 			margin-right: 0;
 			p {
 				text-align: right;
+				&:first-child {
+					margin-top: $unit-half;
+				}
 				&:last-child {
 					margin-bottom: 0;
 				}
