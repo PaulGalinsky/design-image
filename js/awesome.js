@@ -172,7 +172,7 @@ jQuery( document ).ready( function( $ ) {
 	var isSecure = (window.location.protocol=='https:');
 	if(!Cookies.get('seen_cookie_notice')){
 			Cookies.set('seen_cookie_notice',1,{expires:365,secure:isSecure});
-			$('#site').prepend('<div class="cookie-notice"><p>DesignImage.eu stores a few <a href="http://designimage.eu/privacy-policy/">cookies</a> on your hardware. Sadly it doesn\'t put any in your cupboard.</p></div>');}
+			$('#site').prepend('<div class="cookie-notice"><p>DesignImage.eu stores a few <a href="https://designimage.eu/privacy-policy/">cookies</a> on your hardware. Sadly it doesn\'t put any in your cupboard.</p></div>');}
 
 		// smooth scroll
 		$('.scroll_to').click(function(e){
