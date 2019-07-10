@@ -165,22 +165,24 @@
 
 
 
-// JQuery calls on document ready
+// jQuery calls on document ready
 jQuery( document ).ready( function( $ ) {
 
-	// cookie notice
+	// Cookie notice.
+	// The URL of the page to link to has been made available to us by the localization in functions.php, so we use that rather than a hardcoded one.
 	var isSecure = (window.location.protocol=='https:');
-	if(!Cookies.get('seen_cookie_notice')){
-			Cookies.set('seen_cookie_notice',1,{expires:365,secure:isSecure});
-			$('#site').prepend('<div class="cookie-notice"><p>DesignImage.eu stores a few <a href="https://designimage.eu/privacy-policy/">cookies</a> on your hardware. Sadly it doesn\'t put any in your cupboard.</p></div>');}
+	if (!Cookies.get('seen_cookie_notice')){
+		Cookies.set('seen_cookie_notice',1,{expires:365,secure:isSecure});
+		$('#site').prepend('<div class="cookie-notice"><p>DesignImage.eu stores a few <a href="' + awesome.privacyPageUri + '">cookies</a> on your hardware. Sadly it doesn\'t put any in your cupboard.</p></div>');
+	}
 
-		// smooth scroll
-		$('.scroll_to').click(function(e){
-					var jump = $(this).attr('href');
-					var new_position = $(jump).offset();
-					$('html, body').stop().animate({ scrollTop: new_position.top }, 1000);
-					e.preventDefault();
-			});
+	// smooth scroll
+	$('.scroll_to').click(function(e){
+		var jump = $(this).attr('href');
+		var new_position = $(jump).offset();
+		$('html, body').stop().animate({ scrollTop: new_position.top }, 1000);
+		e.preventDefault();
+	});
 
 });
 

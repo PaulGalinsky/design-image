@@ -1,8 +1,46 @@
 <?php
+
 function awesome_script_enqueue() {
-	wp_enqueue_style('customstyle', get_template_directory_uri().'/css/awesome.css', array(), '1.0.0', 'all');
-	wp_enqueue_script("jquery");
-	wp_enqueue_script('customjs', get_template_directory_uri().'/js/awesome.js', array(), '1.0.0', true);
+
+	// Set up variables for various things so that we don't have to repeat them in the code.
+	$name     = 'awesome';
+	$css_file = 'css/' . $name . '.css';
+	$js_file  = 'js/' . $name . '.js';
+
+	// Enqueue the stylesheet.
+	// It doesn't have any dependencies, and the version number is automatically generated from the timestamp that the file was last updated.
+	wp_enqueue_style(
+		$name,
+		get_template_directory_uri() . '/' . $css_file,
+		array(),
+		filemtime( get_theme_file_path( $css_file ) )
+	);
+
+	// Enqueue the JavaScript.
+	// It's dependent on jQuery (which we don't need to enqueue, the fast it's a dependency means that WP will automatically enqueue it for us), and the version number is automatically generated from the timestamp that the file was last updated.
+	wp_enqueue_script(
+		$name,
+		get_template_directory_uri() . '/' . $js_file,
+		[ 'jquery' ],
+		filemtime( get_theme_file_path( $js_file ) ),
+		true
+	);
+
+	// If there is no privacy policy page ID set, then exit this function.
+	if ( ! $privacy_page_id = get_option( 'wp_page_for_privacy_policy' ) ) {
+		return;
+	}
+
+	// Set up an array containing the variables we want to be able to access in our script, at the moment it's just the URL of the privacy page.
+	$localize = [ 'privacyPageUri' => get_permalink( $privacy_page_id ) ];
+
+	// Now localize the script we previously enqueued, by associating it with the array of variable names.
+	wp_localize_script(
+		$name,
+		$name,
+		$localize
+	);
+
 };
 
 add_action('wp_enqueue_scripts', 'awesome_script_enqueue');
