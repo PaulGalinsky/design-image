@@ -1,6 +1,6 @@
 <?php
 
-function awesome_script_enqueue() {
+function awesome_load_styles_and_scripts() {
 
 	// Set up variables for various things so that we don't have to repeat them in the code.
 	$name     = 'awesome';
@@ -43,7 +43,7 @@ function awesome_script_enqueue() {
 
 };
 
-add_action('wp_enqueue_scripts', 'awesome_script_enqueue');
+add_action('wp_enqueue_scripts', 'awesome_load_styles_and_scripts');
 
 
 // Remove unwanted we-admin content
