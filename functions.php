@@ -71,6 +71,15 @@ function di_wordpress_setup(){
 
 add_action( 'after_setup_theme', 'di_wordpress_setup' );
 
+function di_maybe_deregister_block_styles() {
+
+	if ( 'classic' === get_option( 'classic-editor-replace' ) ) {
+		wp_dequeue_style( 'wp-block-library' );
+	}
+
+}
+
+add_action( 'wp_enqueue_scripts', 'di_maybe_deregister_block_styles', 100 );
 
 // Get just one paragraph for home page https://wordpress.stackexchange.com/questions/127159/grab-the-first-paragraph-of-each-post
 function get_first_paragraph(){
