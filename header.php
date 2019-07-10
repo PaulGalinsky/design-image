@@ -2,7 +2,6 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Design Image</title>
 		<?php wp_head(); ?>
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Lemon" rel="stylesheet">
 	</head>
