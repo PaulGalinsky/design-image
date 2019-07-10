@@ -1,11 +1,47 @@
 <?php
 
+// Creates a Google Fonts URL for the required families and weights.
+function awesome_fonts_url() {
+
+	// Set up an array of the families and weights we want to load.
+	$font_families = [
+		'Josefin+Sans:400,700',
+		'Lemon:400'
+	];
+
+	// Convert the array into a string separated with the '|' (pipe) character.
+	$families_query_arg = implode( '|', $font_families );
+
+	// Set up an array of query args.
+	// i.e. key=value&another_key=another_value
+	$query_args = [
+		'family'  => $families_query_arg,
+		'display' => 'swap'
+	];
+
+	// Now generate the URL with the query args added.
+	$fonts_url = add_query_arg(
+		$query_args,
+		'https://fonts.googleapis.com/css'
+	);
+
+	// And return it.
+	return $fonts_url;
+
+}
+
 function awesome_load_styles_and_scripts() {
 
 	// Set up variables for various things so that we don't have to repeat them in the code.
 	$name     = 'awesome';
 	$css_file = 'css/' . $name . '.css';
 	$js_file  = 'js/' . $name . '.js';
+
+	// Enqueue the fonts stylesheet first.
+	wp_enqueue_style(
+		$name . '-fonts',
+		awesome_fonts_url()
+	);
 
 	// Enqueue the stylesheet.
 	// It doesn't have any dependencies, and the version number is automatically generated from the timestamp that the file was last updated.
