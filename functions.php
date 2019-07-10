@@ -49,7 +49,7 @@ add_action('wp_enqueue_scripts', 'awesome_script_enqueue');
 // Remove unwanted we-admin content
 remove_action('welcome_panel', 'wp_welcome_panel');
 
-function remove_menus() {
+function di_remove_menus() {
 
 	if ( current_user_can( 'import' ) ) {
 		return;
@@ -62,7 +62,7 @@ function remove_menus() {
 	remove_menu_page( 'tools.php' );                  //Tools
 	remove_menu_page( 'options-general.php' );        //Settings
 }
-add_action( 'admin_menu', 'remove_menus' );
+add_action( 'admin_menu', 'di_remove_menus' );
 
 
 function di_wordpress_setup(){
