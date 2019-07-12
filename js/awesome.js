@@ -173,7 +173,7 @@ jQuery( document ).ready( function( $ ) {
 		$('#site').prepend('<div class="cookie-notice"><p>DesignImage.eu stores a few <a href="' + awesome.privacyPageUri + '">cookies</a> on your hardware. Sadly it doesn\'t put any in your cupboard.</p></div>');
 	}
 
-	// smooth scroll
+	// Smooth scroll.
 	$('.scroll_to').click(function(e){
 		var jump = $(this).attr('href');
 		var new_position = $(jump).offset();
