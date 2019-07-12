@@ -68,7 +68,10 @@ function awesome_load_styles_and_scripts() {
 	}
 
 	// Set up an array containing the variables we want to be able to access in our script, at the moment it's just the URL of the privacy page.
-	$localize = [ 'privacyPageUri' => get_permalink( $privacy_page_id ) ];
+	$localize = [
+		'privacyPageUri' => get_permalink( $privacy_page_id ),
+		'cookieName'     => 'seen_cookie_notice'
+	];
 
 	// Now localize the script we previously enqueued, by associating it with the array of variable names.
 	wp_localize_script(

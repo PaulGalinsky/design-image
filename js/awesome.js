@@ -168,8 +168,8 @@ jQuery( document ).ready( function( $ ) {
 	// Cookie notice.
 	// The URL of the page to link to has been made available to us by the localization in functions.php, so we use that rather than a hardcoded one.
 	var isSecure = (window.location.protocol=='https:');
-	if (!Cookies.get('seen_cookie_notice')){
-		Cookies.set('seen_cookie_notice',1,{expires:365,secure:isSecure});
+	if (!Cookies.get( awesome.cookieName )){
+		Cookies.set( awesome.cookieName,1,{expires:365,secure:isSecure});
 		$('#site').prepend('<div class="cookie-notice"><p>DesignImage.eu stores a few <a href="' + awesome.privacyPageUri + '">cookies</a> on your hardware. Sadly it doesn\'t put any in your cupboard.</p></div>');
 	}
 
