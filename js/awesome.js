@@ -185,8 +185,3 @@ jQuery( document ).ready( function( $ ) {
 	});
 
 });
-
-
-
-
-

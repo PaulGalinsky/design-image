@@ -125,8 +125,3 @@ function get_first_paragraph(){
 	$str = strip_tags($str, '<a><strong><em>');
 	return '<p>' . $str . '</p>';
 }
-
-
-
-
-?>
