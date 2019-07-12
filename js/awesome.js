@@ -162,9 +162,6 @@
 	return init(function () {});
 }));
 
-
-
-
 // jQuery calls on document ready
 jQuery( document ).ready( function( $ ) {
 
