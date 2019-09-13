@@ -362,9 +362,9 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/js/awesome-min.js",
-		"oF": 1,
+		"oF": 0,
 		"sC": 0,
 		"tS": 0
 		},
