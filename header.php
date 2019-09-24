@@ -16,8 +16,8 @@
 				</div><!-- .logo -->
 				<?php if ( is_home() ) : echo	'
 					<div class="intro">
-						<p>Hello, Paul here! I’ve retired designimage.eu and am now half of the magnificent web and print duo <a href="https://www.lumpylemon.co.uk">Lumpy Lemon</a>.</p>
-						<p>Oh, and if we haven’t spoken in a while, I’ve married, changed my surname to Galinsky and moved to Edinburgh. It’s all change!</p>
+						<p>Hi, I\'m Paul Galinsky, a print and web designer, project manager, and junior level web developer, living in Edinburgh.</p>
+						<p>I built this site to practice WordPress theme development and display a little of my print portfolio. I\'m currently half of the magnificent web and print duo <a href="https://www.lumpylemon.co.uk">Lumpy Lemon</a>.</p>
 					</div>
 				'; endif; ?>
 
