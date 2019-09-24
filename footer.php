@@ -4,8 +4,8 @@
 
 			<div class="footer-links">
 				<ul>
-					<li><a class="lemon" href="https://www.lumpylemon.co.uk">My new company</a></li>
-					<li><a class="email" href="mailto:<?php echo esc_html( antispambot( 'paul@designimage.eu', 1 ) ); ?>">Email me</a></li>
+					<li><a class="lemon" href="https://www.lumpylemon.co.uk">Visit Lumpy Lemon</a></li>
+					<li><a class="email" href="mailto:<?php echo esc_html( antispambot( 'paul@galinsky.dev', 1 ) ); ?>">Email me</a></li>
 					<li><a class="privacy" href="<?php echo site_url('/privacy-policy'); ?>">Privacy Policy</a></li>
 					<li><a class="top scroll_to" href="#site">Back to top</a></li>
 				</ul>
